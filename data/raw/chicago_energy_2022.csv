@@ -1,0 +1,6 @@
+Data Year,ID,Property Name,Primary Property Type,Electricity Use (kBtu),Natural Gas Use (kBtu),Total GHG Emissions (Metric Tons CO2e)
+2022,1001,Downtown Office A,Office,1500000,500000,200
+2022,1002,Westside Retail,Retail Store,850000,0,100
+2022,1003,North Hospital,Hospital,5000000,2000000,950
+2022,1004,South School,K-12 School,400000,100000,80
+2022,1005,East Warehouse,Non-Refrigerated Warehouse,200000,50000,35

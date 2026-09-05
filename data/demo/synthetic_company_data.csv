@@ -1,0 +1,8 @@
+Facility,Utility,Usage Amount,UOM,Date
+HQ Building,Electricity,50000,kWh,2023-05-01
+HQ Building,Gas,250,m3,2023-05-01
+Warehouse A,Power,12000,kWh,2023-05-01
+Warehouse A,Diesel Gen,500,Liters,2023-05-01
+Company Car 1,Petrol,40,Liters,2023-05-02
+Delivery Truck,Diesel,120,Liters,2023-05-03
+HQ Building,Water,100,m3,2023-05-01

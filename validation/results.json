@@ -1,0 +1,33 @@
+[
+  {
+    "dataset": "Chicago Energy Benchmarking",
+    "total_records_ingested": 9,
+    "successfully_calculated": 9,
+    "rejected_records": 0,
+    "total_emissions_kgCO2e": 624657.8304265,
+    "scope_totals": {
+      "Scope 2": 482408.7868725,
+      "Scope 1": 142249.043554
+    }
+  },
+  {
+    "dataset": "Austin Fleet Fuel",
+    "total_records_ingested": 4,
+    "successfully_calculated": 4,
+    "rejected_records": 0,
+    "total_emissions_kgCO2e": 893.5040020054543,
+    "scope_totals": {
+      "Scope 1": 893.5040020054543
+    }
+  },
+  {
+    "dataset": "Synthetic Company Data",
+    "total_records_ingested": 5,
+    "successfully_calculated": 2,
+    "rejected_records": 3,
+    "total_emissions_kgCO2e": 31000.0,
+    "scope_totals": {
+      "Scope 2": 31000.0
+    }
+  }
+]

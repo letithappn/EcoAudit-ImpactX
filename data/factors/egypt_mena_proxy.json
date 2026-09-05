@@ -1,0 +1,26 @@
+{
+  "dataset_metadata": {
+    "name": "Egypt MENA Regional Factors Proxy 2024",
+    "description": "Approximate and proxy factors for the Egypt/MENA region. MUST be replaced with official IEA/EgyptERA data for production.",
+    "source_url": "https://www.iea.org/countries/egypt",
+    "year": 2024,
+    "version": "Proxy v1.0",
+    "country": "Egypt",
+    "methodology": "Proxy / Academic / Approximate"
+  },
+  "factors": [
+    {
+      "factor_id": "PROXY-2024-ELEC-EG-KWH",
+      "activity_type": "grid_electricity",
+      "value": "0.50000",
+      "unit": "kgCO2e/kWh",
+      "per_unit": "kWh",
+      "scope": "Scope 2",
+      "category": "Purchased Electricity",
+      "gas_basis": "CO2E",
+      "fuel_type_detail": "Egypt national grid electricity",
+      "dataset_name": "N/A — estimated",
+      "applicability_notes": "PROXY VALUE. Egypt's grid is heavily reliant on natural gas. This factor is a placeholder and must be replaced with an authoritative source (IEA or EgyptERA) before production use."
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "dataset_metadata": {
+    "name": "UK DESNZ/DEFRA 2024 Conversion Factors (Condensed Set)",
+    "description": "Authoritative emission factors published by the UK government for company reporting.",
+    "source_url": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2024",
+    "year": 2024,
+    "version": "DEFRA 2024 Condensed Set",
+    "country": "UK",
+    "methodology": "GHG Protocol / IPCC AR5 GWPs"
+  },
+  "factors": [
+    {
+      "factor_id": "DEFRA-2024-DIESEL-LITRE",
+      "activity_type": "diesel",
+      "value": "2.51210",
+      "unit": "kgCO2e/litre",
+      "per_unit": "litre",
+      "scope": "Scope 1",
+      "category": "Stationary Combustion",
+      "gas_basis": "CO2E",
+      "fuel_type_detail": "Diesel (average biofuel blend)",
+      "dataset_name": "Fuels",
+      "applicability_notes": "Average biofuel blend as sold at UK forecourts. Use for general diesel consumption unless fuel is known to be 100% mineral or a specific biodiesel blend."
+    },
+    {
+      "factor_id": "DEFRA-2024-DIESEL-MOBILE-LITRE",
+      "activity_type": "diesel",
+      "value": "2.51210",
+      "unit": "kgCO2e/litre",
+      "per_unit": "litre",
+      "scope": "Scope 1",
+      "category": "Mobile Combustion",
+      "gas_basis": "CO2E",
+      "fuel_type_detail": "Diesel (average biofuel blend)",
+      "dataset_name": "Fuels",
+      "applicability_notes": "Average biofuel blend as sold at UK forecourts. Use for general diesel consumption unless fuel is known to be 100% mineral or a specific biodiesel blend."
+    },
+    {
+      "factor_id": "DEFRA-2024-NATGAS-KWH",
+      "activity_type": "natural_gas",
+      "value": "0.18316",
+      "unit": "kgCO2e/kWh",
+      "per_unit": "kWh",
+      "scope": "Scope 1",
+      "category": "Stationary Combustion",
+      "gas_basis": "CO2E",
+      "fuel_type_detail": "Natural Gas",
+      "dataset_name": "Fuels",
+      "applicability_notes": "Net Calorific Value (NCV) basis. If activity data is in Gross CV, apply NCV/GCV ratio first."
+    },
+    {
+      "factor_id": "DEFRA-2024-PETROL-LITRE",
+      "activity_type": "petrol",
+      "value": "2.16802",
+      "unit": "kgCO2e/litre",
+      "per_unit": "litre",
+      "scope": "Scope 1",
+      "category": "Mobile Combustion",
+      "gas_basis": "CO2E",
+      "fuel_type_detail": "Petrol (average biofuel blend)",
+      "dataset_name": "Fuels",
+      "applicability_notes": "Average biofuel blend as sold at UK forecourts. For company-owned or controlled vehicles."
+    },
+    {
+      "factor_id": "DEFRA-2024-ELEC-UK-KWH",
+      "activity_type": "grid_electricity",
+      "value": "0.20705",
+      "unit": "kgCO2e/kWh",
+      "per_unit": "kWh",
+      "scope": "Scope 2",
+      "category": "Purchased Electricity",
+      "gas_basis": "CO2E",
+      "fuel_type_detail": "UK Electricity (generation)",
+      "dataset_name": "UK Electricity",
+      "applicability_notes": "Location-based Scope 2 factor for UK grid electricity generation. Does NOT include T&D losses (report T&D losses separately under Scope 3)."
+    }
+  ]
+}
