@@ -1,14 +1,14 @@
 """
 AI provider abstraction.
 
-Defines the AIClassifier protocol that all AI providers must implement.
+Defines the protocols that all AI providers must implement.
 This allows swapping providers (Gemini, OpenAI, mock) without changing
 the pipeline.
 """
 
 from __future__ import annotations
 
-from typing import Protocol
+from typing import Any, Protocol
 
 from ecoaudit.ai.schemas import ActivityCandidate
 
@@ -25,15 +25,6 @@ class AIClassifier(Protocol):
         raw_row: dict[str, str],
         source_row: int | None = None,
     ) -> ActivityCandidate:
-        """Classify a single raw data row into an ActivityCandidate.
-
-        Args:
-            raw_row: Dict of column_name -> value from the raw data.
-            source_row: Optional row number for traceability.
-
-        Returns:
-            An ActivityCandidate with the AI's classification.
-        """
         ...
 
     def classify_batch(
@@ -41,16 +32,36 @@ class AIClassifier(Protocol):
         raw_rows: list[dict[str, str]],
         start_row: int = 2,
     ) -> list[ActivityCandidate]:
-        """Classify multiple raw data rows.
+        ...
 
-        Default implementation calls classify_row in a loop.
-        Providers may override for batch-optimized API calls.
 
+class AIClient(Protocol):
+    """Protocol for a generic AI client capable of structured and text generation."""
+    
+    def generate_structured(
+        self,
+        prompt: str,
+    ) -> dict[str, Any] | list[dict[str, Any]]:
+        """Generate a structured JSON response from the given prompt.
+        
         Args:
-            raw_rows: List of raw data row dicts.
-            start_row: Row number offset for the first row.
-
+            prompt: The full prompt string including context and instructions.
+            
         Returns:
-            List of ActivityCandidates, one per input row.
+            Parsed JSON object or list.
+        """
+        ...
+        
+    def generate_text(
+        self,
+        prompt: str,
+    ) -> str:
+        """Generate a raw text response from the given prompt.
+        
+        Args:
+            prompt: The full prompt string.
+            
+        Returns:
+            The raw text string.
         """
         ...

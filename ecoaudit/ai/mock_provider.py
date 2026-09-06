@@ -183,6 +183,27 @@ class MockClassifier:
             raw_input=raw_input,
         )
 
+    def generate_structured(self, prompt: str) -> dict[str, Any] | list[dict[str, Any]]:
+        # Used for testing recommendation candidates
+        # Returns a dummy candidate proposal
+        return {
+            "recommendations": [
+                {
+                    "title": "Mock 10% Reduction",
+                    "target_hotspot": "Stationary Combustion",
+                    "intervention_type": "PercentageReduction",
+                    "target_activity_ids": ["ACT-TEST"],
+                    "parameters": {"reduction_percentage": "10"},
+                    "rationale": "Testing rationale",
+                    "needs_review": False
+                }
+            ]
+        }
+
+    def generate_text(self, prompt: str) -> str:
+        # Used for testing recommendation explanation
+        return "This is a mock AI explanation of the deterministic scenario result."
+
     def classify_batch(
         self,
         raw_rows: list[dict[str, str]],

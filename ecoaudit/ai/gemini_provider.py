@@ -196,12 +196,71 @@ class GeminiClassifier:
         cleaned = re.sub(r"\n?```\s*$", "", cleaned)
         cleaned = cleaned.strip()
 
+            except json.JSONDecodeError as e:
+                raise ValueError(
+                    f"Gemini response is not valid JSON array: {e}\nRaw response: {text[:500]}"
+                ) from e
+
+
+class GeminiClient:
+    """Generic Gemini client for structured and text generation."""
+
+    def __init__(
+        self,
+        model_name: str = "gemini-2.0-flash",
+        temperature: float = 0.2,
+    ) -> None:
+        self._model_name = model_name
+        self._temperature = temperature
+        self._client: Any = None
+
+    def _get_client(self) -> Any:
+        if self._client is None:
+            try:
+                from google import genai
+            except ImportError:
+                raise ImportError("google-genai package is not installed.")
+
+            api_key = os.environ.get("GEMINI_API_KEY")
+            if not api_key:
+                raise EnvironmentError("GEMINI_API_KEY environment variable is not set.")
+
+            self._client = genai.Client(api_key=api_key)
+
+        return self._client
+
+    def generate_structured(self, prompt: str) -> dict[str, Any] | list[dict[str, Any]]:
+        client = self._get_client()
         try:
-            result = json.loads(cleaned)
-            if not isinstance(result, list):
-                raise ValueError("Expected JSON array, got single object")
-            return result
-        except json.JSONDecodeError as e:
-            raise ValueError(
-                f"Gemini response is not valid JSON array: {e}\nRaw response: {text[:500]}"
-            ) from e
+            response = client.models.generate_content(
+                model=self._model_name,
+                contents=prompt,
+                config={
+                    "temperature": self._temperature,
+                    "response_mime_type": "application/json",
+                },
+            )
+            text = response.text.strip()
+            cleaned = re.sub(r"^```(?:json)?\s*\n?", "", text)
+            cleaned = re.sub(r"\n?```\s*$", "", cleaned)
+            cleaned = cleaned.strip()
+            return json.loads(cleaned)
+        except Exception as e:
+            logger.error("Gemini structured generation failed: %s", e)
+            raise
+
+    def generate_text(self, prompt: str) -> str:
+        client = self._get_client()
+        try:
+            response = client.models.generate_content(
+                model=self._model_name,
+                contents=prompt,
+                config={
+                    "temperature": self._temperature,
+                },
+            )
+            return response.text.strip()
+        except Exception as e:
+            logger.error("Gemini text generation failed: %s", e)
+            raise
+
