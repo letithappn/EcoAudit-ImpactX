@@ -1,0 +1,4 @@
+RecordDate,FacilityName,UtilityType,UsageAmount,UOM
+2024-01-15,HQ Building,Power Bill,15000,kWh
+2024-01-18,Delivery Van,Fuel - Petrol,150,liters
+2024-01-19,Backup Generator,Diesel Gen,500,l

@@ -34,7 +34,7 @@ class GeminiClassifier:
 
     def __init__(
         self,
-        model_name: str = "gemini-2.0-flash",
+        model_name: str = "gemini-3.6-flash",
         temperature: float = 0.1,
     ) -> None:
         self._model_name = model_name
@@ -91,6 +91,8 @@ class GeminiClassifier:
             return parse_ai_response(parsed)
 
         except Exception as e:
+            # We catch Exception here since google.genai.errors might not be imported 
+            # if the SDK fails to load, but we want to catch API errors specifically.
             logger.error("Gemini API call failed: %s", e)
             # Return a safe fallback — unknown with needs_review
             return ActivityCandidate(
@@ -208,7 +210,7 @@ class GeminiClient:
 
     def __init__(
         self,
-        model_name: str = "gemini-2.0-flash",
+        model_name: str = "gemini-3.6-flash",
         temperature: float = 0.2,
     ) -> None:
         self._model_name = model_name
