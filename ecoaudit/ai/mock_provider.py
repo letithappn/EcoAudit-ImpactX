@@ -218,9 +218,9 @@ class MockClassifier:
     def _extract_quantity(self, raw_row: dict[str, str]) -> str:
         """Try to extract a numeric quantity from common column names."""
         quantity_columns = [
-            "Usage Amount", "usage_amount", "Quantity", "quantity",
-            "Amount", "amount", "Value", "value", "Gallons", "gallons",
-            "Volume", "volume", "Consumption", "consumption",
+            "Usage Amount", "usage_amount", "UsageAmount", "Usage", "usage",
+            "Quantity", "quantity", "Amount", "amount", "Value", "value", 
+            "Gallons", "gallons", "Volume", "volume", "Consumption", "consumption",
         ]
         for col in quantity_columns:
             if col in raw_row and raw_row[col].strip():

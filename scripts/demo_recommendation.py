@@ -71,13 +71,13 @@ def main() -> None:
         print(f"--- Recommendation {i}: {rec.title} ---")
         print(f"  Status: {rec.status.value.upper()}")
         print(f"  Rationale: {rec.rationale}")
-        print("\  AI Explanation:")
+        print("  AI Explanation:")
         print(f"    {rec.explanation}")
         
         if rec.scenario_result:
             c_impact = rec.scenario_result.carbon_impact
             f_impact = rec.scenario_result.financial_impact
-            print("\  Deterministic Verification:")
+            print("  Deterministic Verification:")
             print(f"    Carbon Reduction: {c_impact.absolute_reduction:.2f} kgCO2e ({c_impact.percentage_reduction:.1f}%)")
             if f_impact.is_available:
                 print(f"    Cost Savings: ${f_impact.absolute_savings:.2f} ({f_impact.percentage_savings:.1f}%)")
@@ -87,7 +87,7 @@ def main() -> None:
             for a in rec.scenario_result.definition.assumptions:
                 print(f"      - {a}")
         else:
-            print("\  Verification Failed:")
+            print("  Verification Failed:")
             for e in rec.validation_errors:
                 print(f"    - {e}")
         print()

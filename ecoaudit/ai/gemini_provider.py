@@ -195,11 +195,12 @@ class GeminiClassifier:
         cleaned = re.sub(r"^```(?:json)?\s*\n?", "", text)
         cleaned = re.sub(r"\n?```\s*$", "", cleaned)
         cleaned = cleaned.strip()
-
-            except json.JSONDecodeError as e:
-                raise ValueError(
-                    f"Gemini response is not valid JSON array: {e}\nRaw response: {text[:500]}"
-                ) from e
+        try:
+            return json.loads(cleaned)
+        except json.JSONDecodeError as e:
+            raise ValueError(
+                f"Gemini response is not valid JSON array: {e}\nRaw response: {text[:500]}"
+            ) from e
 
 
 class GeminiClient:
