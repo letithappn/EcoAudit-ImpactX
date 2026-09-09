@@ -91,7 +91,7 @@ class GeminiClassifier:
             return parse_ai_response(parsed)
 
         except Exception as e:
-            # We catch Exception here since google.genai.errors might not be imported 
+            # We catch Exception here since google.genai.errors might not be imported
             # if the SDK fails to load, but we want to catch API errors specifically.
             logger.error("Gemini API call failed: %s", e)
             # Return a safe fallback — unknown with needs_review
@@ -266,4 +266,3 @@ class GeminiClient:
         except Exception as e:
             logger.error("Gemini text generation failed: %s", e)
             raise
-

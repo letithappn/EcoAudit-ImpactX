@@ -13,7 +13,10 @@ Purpose:
 
 from __future__ import annotations
 
+from typing import Any
+
 from ecoaudit.ai.schemas import ActivityCandidate
+from ecoaudit.ingestion.normalizer import normalize_header, parse_decimal
 
 
 class MockClassifier:
@@ -30,9 +33,35 @@ class MockClassifier:
         source_row: int | None = None,
     ) -> ActivityCandidate:
         """Classify a single raw data row using keyword matching."""
+        # The normalizer may provide an explicit semantic interpretation for a
+        # wide or oddly named schema. It is still a candidate and goes through
+        # the same validation firewall as keyword-derived output.
+        explicit_type = raw_row.get("EcoAudit Activity Type")
+        if explicit_type:
+            quantity = raw_row.get("EcoAudit Quantity", "0").strip()
+            unit = raw_row.get("EcoAudit Unit", "kWh").strip()
+            scope = raw_row.get("EcoAudit Scope", "Scope 1").strip()
+            category = raw_row.get("EcoAudit Category", "Stationary Combustion").strip()
+            description = raw_row.get("EcoAudit Description", "").strip()
+            reasoning = raw_row.get("EcoAudit Reasoning", "").strip()
+            supported = explicit_type.lower().strip() != "unknown"
+            return ActivityCandidate(
+                activity_type=explicit_type.strip(),
+                quantity=quantity or "0",
+                unit=unit or "kWh",
+                scope=scope,
+                category=category,
+                description=description or "Unclassified source row",
+                confidence=0.99 if supported else 0.10,
+                reasoning=reasoning or "Deterministic schema normalization did not identify a supported activity.",
+                needs_review=not supported,
+                source_row=source_row,
+                raw_input=self._raw_input(raw_row),
+            )
+
         # Combine all values into a single searchable string
         combined = " ".join(str(v) for v in raw_row.values()).lower()
-        raw_input = " | ".join(f"{k}: {v}" for k, v in raw_row.items())
+        raw_input = self._raw_input(raw_row)
 
         # Extract quantity from common column names
         quantity = self._extract_quantity(raw_row)
@@ -41,7 +70,12 @@ class MockClassifier:
         unit = self._extract_unit(raw_row, combined)
 
         # Classify based on keywords
-        if any(kw in combined for kw in ["electricity", "electric", "power bill", "grid"]):
+        strong_electricity = any(kw in combined for kw in ["electricity", "electric", "power bill", "grid", "ev charging"])
+        fuel_specific = any(kw in combined for kw in ["diesel", "petrol", "gasoline", "unleaded"])
+        ambiguous_electricity = any(kw in combined for kw in ["purchased power", "retail store power", "power", "energy", "utilities", "utility bill"])
+        if fuel_specific and not strong_electricity:
+            ambiguous_electricity = False
+        if strong_electricity or ambiguous_electricity:
             return ActivityCandidate(
                 activity_type="grid_electricity",
                 quantity=quantity,
@@ -49,9 +83,13 @@ class MockClassifier:
                 scope="Scope 2",
                 category="Purchased Electricity",
                 description=self._build_description(raw_row, "Grid electricity consumption"),
-                confidence=0.95,
-                reasoning="Keywords indicate purchased electricity from the grid.",
-                needs_review=False,
+                confidence=0.95 if strong_electricity else 0.65,
+                reasoning=(
+                    "Keywords indicate purchased electricity from the grid."
+                    if strong_electricity
+                    else "Power or energy terminology suggests electricity, but the source wording is ambiguous."
+                ),
+                needs_review=not strong_electricity,
                 source_row=source_row,
                 raw_input=raw_input,
             )
@@ -122,7 +160,7 @@ class MockClassifier:
                 raw_input=raw_input,
             )
 
-        if "petrol" in combined or "gasoline" in combined:
+        if "petrol" in combined or "gasoline" in combined or "unleaded" in combined:
             return ActivityCandidate(
                 activity_type="petrol",
                 quantity=quantity,
@@ -131,7 +169,7 @@ class MockClassifier:
                 category="Mobile Combustion",
                 description=self._build_description(raw_row, "Petrol fuel consumption"),
                 confidence=0.85,
-                reasoning="Petrol/gasoline typically indicates vehicle fuel.",
+                reasoning="Petrol, gasoline, or unleaded terminology indicates petrol vehicle fuel.",
                 needs_review=False,
                 source_row=source_row,
                 raw_input=raw_input,
@@ -183,16 +221,33 @@ class MockClassifier:
             raw_input=raw_input,
         )
 
+    def set_recommendation_context(
+        self,
+        activity_ids: list[str] | tuple[str, ...],
+        hotspot_label: str = "",
+    ) -> None:
+        """Bind deterministic recommendation output to the current run.
+
+        Uploaded activities receive generated IDs, so recommendation fixtures
+        must use the IDs from the batch currently being evaluated.
+        """
+        self._recommendation_activity_ids = tuple(activity_ids)
+        self._recommendation_hotspot = hotspot_label
+
     def generate_structured(self, prompt: str) -> dict[str, Any] | list[dict[str, Any]]:
         # Used for testing recommendation candidates
         # Returns a dummy candidate proposal
+        activity_ids = getattr(self, "_recommendation_activity_ids", ())
+        if not activity_ids:
+            return {"recommendations": []}
+
         return {
             "recommendations": [
                 {
                     "title": "Mock 10% Reduction",
-                    "target_hotspot": "Stationary Combustion",
+                    "target_hotspot": getattr(self, "_recommendation_hotspot", ""),
                     "intervention_type": "PercentageReduction",
-                    "target_activity_ids": ["ACT-TEST"],
+                    "target_activity_ids": [activity_ids[0]],
                     "parameters": {"reduction_percentage": "10"},
                     "rationale": "Testing rationale",
                     "needs_review": False
@@ -219,27 +274,48 @@ class MockClassifier:
         """Try to extract a numeric quantity from common column names."""
         quantity_columns = [
             "Usage Amount", "usage_amount", "UsageAmount", "Usage", "usage",
-            "Quantity", "quantity", "Amount", "amount", "Value", "value", 
+            "Quantity", "quantity", "Qty", "qty", "Amount", "amount", "Value", "value", 
             "Gallons", "gallons", "Volume", "volume", "Consumption", "consumption",
+            "Energy Qty", "Energy Quantity", "Fuel Used", "Energy Usage",
         ]
         for col in quantity_columns:
             if col in raw_row and raw_row[col].strip():
-                return raw_row[col].strip()
+                parsed = parse_decimal(raw_row[col])
+                return str(parsed) if parsed is not None else raw_row[col].strip()
+
+        normalized = {normalize_header(key): value for key, value in raw_row.items()}
+        for col in (
+            "usage_amount", "usage", "quantity", "qty", "amount", "value", "gallons",
+            "volume", "consumption", "energy_qty", "energy_quantity", "fuel_used",
+            "energy_usage",
+        ):
+            if normalized.get(col):
+                parsed = parse_decimal(normalized[col])
+                return str(parsed) if parsed is not None else normalized[col].strip()
         return "0"
 
     def _extract_unit(self, raw_row: dict[str, str], combined: str) -> str | None:
         """Try to extract a unit string from common column names."""
-        unit_columns = ["UOM", "uom", "Unit", "unit", "Units", "units"]
-        for col in unit_columns:
-            if col in raw_row and raw_row[col].strip():
-                raw_unit = raw_row[col].strip().lower()
+        unit_columns = ["UOM", "uom", "Unit", "unit", "Units", "units", "Measurement Unit"]
+        candidates = [(col, raw_row[col]) for col in unit_columns if col in raw_row]
+        normalized = {normalize_header(key): value for key, value in raw_row.items()}
+        candidates.extend(
+            (col, normalized[col])
+            for col in ("uom", "unit", "units", "measurement_unit")
+            if col in normalized
+        )
+        for _, value in candidates:
+            if value and value.strip():
+                raw_unit = value.strip().lower()
                 # Normalize common variations
                 unit_map = {
                     "kwh": "kWh", "mwh": "MWh", "kbtu": "kBtu",
                     "liters": "litre", "litres": "litre", "liter": "litre",
                     "l": "litre", "gallons": "gallon_us", "gal": "gallon_us",
                     "m3": "m3", "kg": "kg", "tonne": "tonne", "tonnes": "tonne",
-                    "km": "km", "miles": "mile", "mile": "mile",
+                    "kilowatt-hour": "kWh", "kilowatt hour": "kWh",
+                    "megawatt-hour": "MWh", "megawatt hour": "MWh",
+                    "kilobtu": "kBtu", "km": "km", "miles": "mile", "mile": "mile",
                 }
                 return unit_map.get(raw_unit, raw_unit)
         return None
@@ -253,3 +329,7 @@ class MockClassifier:
         if facility:
             return f"{facility} - {suffix}"
         return suffix
+
+    def _raw_input(self, raw_row: dict[str, str]) -> str:
+        """Keep traceability while bounding per-record memory use."""
+        return " | ".join(f"{k}: {v}" for k, v in raw_row.items())[:4000]

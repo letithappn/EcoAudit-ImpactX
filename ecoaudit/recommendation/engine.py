@@ -96,6 +96,16 @@ class RecommendationEngine:
         Returns:
             List of evaluated Recommendation objects.
         """
+        # Deterministic providers may use the current batch to produce a
+        # stable, valid fixture without guessing or hard-coding activity IDs.
+        set_context = getattr(self.ai_client, "set_recommendation_context", None)
+        if callable(set_context):
+            hotspot_label = report.hotspots[0].label if report.hotspots else ""
+            set_context(
+                [result.activity.activity_id for result in batch.results],
+                hotspot_label,
+            )
+
         # Step 1: Candidate Generation
         prompt = build_candidate_prompt(report)
         try:

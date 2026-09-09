@@ -70,7 +70,12 @@ DOMAIN_CONTEXT = """\
 5. Electricity from the grid → Scope 2, Purchased Electricity
 6. Water, waste, or unrecognized utilities → unknown, needs_review: true
 7. If the description is ambiguous, set needs_review: true
-8. NEVER guess. If you cannot determine the activity, use "unknown"."""
+8. NEVER guess. If you cannot determine the activity, use "unknown".
+9. Some rows may include EcoAudit-prefixed fields added by deterministic CSV
+   normalization. Treat those fields as the proposed semantic mapping and
+   quantity from the source data. Preserve "unknown" when supplied; do not
+   turn an unsupported field into a supported activity. The proposal still
+   passes through downstream validation."""
 
 
 # Carefully selected few-shot examples
@@ -183,6 +188,8 @@ Respond with ONLY a single JSON object matching this schema:
 - If the data is unclear or does not represent a GHG emission source, set activity_type to "unknown" and needs_review to true.
 - NEVER invent information that is not in the input data.
 - The quantity must come directly from the input data.
+- If EcoAudit-prefixed semantic fields are present, use them as the explicit
+  normalized view of the source row. Do not override an "unknown" proposal.
 - Do NOT calculate emissions — you are classifying, not calculating.
 
 ## DATA TO CLASSIFY

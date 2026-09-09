@@ -1,0 +1,34 @@
+Record Date,Facility,Utility,Usage Amount,UOM,Notes
+2024-01-15,HQ Building,Power Bill,15000,kWh,Monthly grid electricity
+2024-02-15,HQ Building,Power Bill,14800,kWh,Monthly grid electricity
+2024-03-15,HQ Building,Electricity,15200,kWh,Monthly grid electricity
+2024-04-15,HQ Building,Electricity,14900,kWh,Monthly grid electricity
+2024-05-15,HQ Building,Electricity,15800,kWh,Monthly grid electricity
+2024-06-15,HQ Building,Electricity,16100,kWh,Monthly grid electricity
+2024-01-15,Factory A,Natural Gas,4500,kWh,Boiler fuel
+2024-02-15,Factory A,Natural Gas,4300,kWh,Boiler fuel
+2024-03-15,Factory A,Natural Gas,4100,kWh,Boiler fuel
+2024-04-15,Factory A,Natural Gas,3600,kWh,Boiler fuel
+2024-05-15,Factory A,Natural Gas,3200,kWh,Boiler fuel
+2024-06-15,Factory A,Natural Gas,3000,kWh,Boiler fuel
+2024-01-08,Warehouse A,Diesel Generator,500,Liters,Backup generation
+2024-02-08,Warehouse A,Diesel Generator,480,Liters,Backup generation
+2024-03-08,Warehouse A,Diesel Generator,520,Liters,Backup generation
+2024-04-08,Warehouse A,Diesel Generator,450,Liters,Backup generation
+2024-05-08,Warehouse A,Diesel Generator,470,Liters,Backup generation
+2024-06-08,Warehouse A,Diesel Generator,490,Liters,Backup generation
+2024-01-05,Delivery Fleet,Diesel,120,Liters,Company vehicles
+2024-02-05,Delivery Fleet,Diesel,135,Liters,Company vehicles
+2024-03-05,Delivery Fleet,Diesel,128,Liters,Company vehicles
+2024-04-05,Delivery Fleet,Diesel,142,Liters,Company vehicles
+2024-05-05,Delivery Fleet,Diesel,139,Liters,Company vehicles
+2024-06-05,Delivery Fleet,Diesel,151,Liters,Company vehicles
+2024-01-12,Sales Fleet,Petrol,210,Liters,Company vehicles
+2024-02-12,Sales Fleet,Petrol,198,Liters,Company vehicles
+2024-03-12,Sales Fleet,Unleaded,220,Liters,Company vehicles
+2024-04-12,Sales Fleet,Petrol,205,Liters,Company vehicles
+2024-05-12,Sales Fleet,Petrol,214,Liters,Company vehicles
+2024-06-12,Sales Fleet,Petrol,226,Liters,Company vehicles
+2024-06-20,HQ Building,Gas,800,m3,Ambiguous fuel wording
+2024-06-21,HQ Building,Water,100,m3,Non-emission utility
+2024-06-22,Factory A,Random Service,1,month,Unsupported non-energy record
