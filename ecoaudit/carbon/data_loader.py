@@ -5,6 +5,8 @@ Loads production emission factors from JSON files into the EmissionFactorRegistr
 This allows separating code from authoritative factor datasets.
 """
 
+from __future__ import annotations
+
 import json
 import logging
 from decimal import Decimal

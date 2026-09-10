@@ -13,6 +13,8 @@ These are NOT production-grade emission factors.
 The real emission-factor database will be built in Phase 2.
 """
 
+from __future__ import annotations
+
 import logging
 from decimal import Decimal
 

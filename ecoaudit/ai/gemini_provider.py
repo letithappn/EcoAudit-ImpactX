@@ -22,23 +22,54 @@ from ecoaudit.ai.schemas import ActivityCandidate, parse_ai_response
 logger = logging.getLogger(__name__)
 
 
+DEFAULT_GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+
+
+def test_gemini_connection(api_key: str | None = None, model_name: str | None = None) -> dict[str, Any]:
+    """Test connection to Gemini API with the given or configured key."""
+    key = api_key or os.environ.get("GEMINI_API_KEY")
+    if not key:
+        return {"success": False, "message": "GEMINI_API_KEY is not set", "model": model_name or DEFAULT_GEMINI_MODEL}
+
+    model = model_name or DEFAULT_GEMINI_MODEL
+    try:
+        from google import genai
+        client = genai.Client(api_key=key)
+        response = client.models.generate_content(
+            model=model,
+            contents="Say 'OK'",
+        )
+        return {
+            "success": True,
+            "message": f"Connected to {model} successfully",
+            "model": model,
+            "response": response.text.strip() if response and response.text else "OK",
+        }
+    except Exception as e:
+        logger.error("Gemini connection test failed: %s", e)
+        return {"success": False, "message": str(e), "model": model}
+
+
 class GeminiClassifier:
     """Gemini-based activity classifier.
 
-    Requires the GEMINI_API_KEY environment variable to be set.
+    Requires the GEMINI_API_KEY environment variable to be set, or api_key passed explicitly.
 
     Args:
-        model_name: Gemini model to use. Default: "gemini-2.0-flash".
+        model_name: Gemini model to use. Default: gemini-2.5-flash.
         temperature: Sampling temperature. Lower = more deterministic.
+        api_key: Optional explicit Gemini API key.
     """
 
     def __init__(
         self,
-        model_name: str = "gemini-3.6-flash",
+        model_name: str | None = None,
         temperature: float = 0.1,
+        api_key: str | None = None,
     ) -> None:
-        self._model_name = model_name
+        self._model_name = model_name or os.environ.get("GEMINI_MODEL", DEFAULT_GEMINI_MODEL)
         self._temperature = temperature
+        self._api_key = api_key
         self._client: Any = None
 
     def _get_client(self) -> Any:
@@ -52,16 +83,17 @@ class GeminiClassifier:
                     "Install with: pip install google-genai"
                 )
 
-            api_key = os.environ.get("GEMINI_API_KEY")
+            api_key = self._api_key or os.environ.get("GEMINI_API_KEY")
             if not api_key:
                 raise EnvironmentError(
                     "GEMINI_API_KEY environment variable is not set. "
-                    "Set it with: export GEMINI_API_KEY='your-key-here'"
+                    "Set it with: export GEMINI_API_KEY='your-key-here' or via /api/ai/config"
                 )
 
             self._client = genai.Client(api_key=api_key)
 
         return self._client
+
 
     def classify_row(
         self,
@@ -210,11 +242,13 @@ class GeminiClient:
 
     def __init__(
         self,
-        model_name: str = "gemini-3.6-flash",
+        model_name: str | None = None,
         temperature: float = 0.2,
+        api_key: str | None = None,
     ) -> None:
-        self._model_name = model_name
+        self._model_name = model_name or os.environ.get("GEMINI_MODEL", DEFAULT_GEMINI_MODEL)
         self._temperature = temperature
+        self._api_key = api_key
         self._client: Any = None
 
     def _get_client(self) -> Any:
@@ -224,9 +258,9 @@ class GeminiClient:
             except ImportError:
                 raise ImportError("google-genai package is not installed.")
 
-            api_key = os.environ.get("GEMINI_API_KEY")
+            api_key = self._api_key or os.environ.get("GEMINI_API_KEY")
             if not api_key:
-                raise EnvironmentError("GEMINI_API_KEY environment variable is not set.")
+                raise EnvironmentError("GEMINI_API_KEY environment variable is not set. Set it via export or /api/ai/config")
 
             self._client = genai.Client(api_key=api_key)
 

@@ -181,7 +181,13 @@ def prepare_row(row: dict[str, str], source_row: int) -> list[PreparedRow]:
     wide_headers = {header for header, *_ in _WIDE_ACTIVITY_FIELDS}
     if wide_headers.intersection(normalized):
         prepared: list[PreparedRow] = []
-        for header, activity_type, scope, category, description, unit in _WIDE_ACTIVITY_FIELDS:
+        prop_name = row.get("Property Name") or row.get("Address") or ""
+        prop_type = row.get("Primary Property Type") or ""
+        building_context = f" - {prop_name}" if prop_name else ""
+        if prop_type:
+            building_context += f" ({prop_type})"
+
+        for header, activity_type, scope, category, base_description, unit in _WIDE_ACTIVITY_FIELDS:
             if header not in normalized or not normalized[header]:
                 continue
             raw_quantity = normalized[header]
@@ -190,10 +196,11 @@ def prepare_row(row: dict[str, str], source_row: int) -> list[PreparedRow]:
                 continue
             quantity = str(parsed) if parsed is not None else raw_quantity
             is_supported = activity_type != "unknown"
+            description = f"{base_description}{building_context}" if building_context else base_description
             reasoning = (
-                f"Deterministically mapped from the '{header}' column."
+                f"Deterministically mapped from '{header}' for {prop_type or 'facility'} at {prop_name or 'site'}."
                 if is_supported
-                else description
+                else base_description
             )
             prepared.append(
                 PreparedRow(

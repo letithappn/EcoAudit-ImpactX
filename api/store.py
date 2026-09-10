@@ -82,6 +82,10 @@ class RunStore:
         with self._lock:
             return self._runs.get(run_id)
 
+    def list(self) -> list[RunSession]:
+        with self._lock:
+            return list(self._runs.values())
+
     def _set_stage(self, session: RunSession, stage: str) -> None:
         with self._lock:
             session.stage = stage

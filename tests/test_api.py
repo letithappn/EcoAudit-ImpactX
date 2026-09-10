@@ -50,6 +50,7 @@ def test_run_api_exposes_decimal_safe_summary_and_evidence() -> None:
     activities = client.get(f"/api/runs/{run_id}/activities").json()["activities"]
     assert activities[0]["original_row"]
     assert activities[0]["activity_id"].startswith("AI-")
+    assert "reasoning" in activities[0]
 
     evidence = client.get(f"/api/runs/{run_id}/evidence").json()["evidence"]
     assert evidence[0]["original_row"]
@@ -85,3 +86,49 @@ def test_run_api_rejects_non_csv_upload() -> None:
         files={"file": ("data.xlsx", b"not a csv", "application/vnd.ms-excel")},
     )
     assert response.status_code == 415
+
+
+def test_ai_status_endpoint() -> None:
+    client = TestClient(app)
+    response = client.get("/api/ai/status")
+    assert response.status_code == 200
+    data = response.json()
+    assert "configured" in data
+    assert "provider" in data
+    assert "model" in data
+    assert "status" in data
+
+
+def test_ai_config_endpoint() -> None:
+    client = TestClient(app)
+    # Rejects empty key
+    res_bad = client.post("/api/ai/config", json={"api_key": ""})
+    assert res_bad.status_code == 422
+
+    # Sets key and model
+    res_ok = client.post("/api/ai/config", json={"api_key": "test-key-12345", "model": "gemini-2.5-flash"})
+    assert res_ok.status_code == 200
+    data = res_ok.json()
+    assert data["success"] is True
+    assert data["model"] == "gemini-2.5-flash"
+
+    # Status reflects configuration
+    status = client.get("/api/ai/status").json()
+    assert status["configured"] is True
+    assert status["model"] == "gemini-2.5-flash"
+
+
+def test_ai_test_endpoint() -> None:
+    client = TestClient(app)
+    # Rejects empty key
+    res_bad = client.post("/api/ai/test", json={"api_key": ""})
+    assert res_bad.status_code == 422
+
+    # Tests key and returns structured diagnostic
+    res = client.post("/api/ai/test", json={"api_key": "invalid-dummy-key", "model": "gemini-2.5-flash"})
+    assert res.status_code == 200
+    data = res.json()
+    assert "success" in data
+    assert "message" in data
+    assert data["model"] == "gemini-2.5-flash"
+

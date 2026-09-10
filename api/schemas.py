@@ -59,6 +59,7 @@ class ActivityDTO(DTO):
     validation_status: Literal["validated", "review", "rejected"]
     validation_errors: list[str]
     validation_warnings: list[str]
+    reasoning: str | None = None
 
 
 class CalculationTraceDTO(DTO):
@@ -226,3 +227,35 @@ class ScenarioRequest(DTO):
 class ScenarioResponse(DTO):
     run_id: str
     scenario: ScenarioDTO
+
+
+class AIStatusResponse(DTO):
+    configured: bool
+    provider: str
+    model: str
+    status: str
+    message: str | None = None
+
+
+class AIConfigRequest(DTO):
+    api_key: str = Field(min_length=1)
+    model: str | None = None
+
+
+class AIConfigResponse(DTO):
+    success: bool
+    message: str
+    model: str
+
+
+class AITestRequest(DTO):
+    api_key: str = Field(min_length=1)
+    model: str | None = None
+
+
+class AITestResponse(DTO):
+    success: bool
+    message: str
+    model: str
+    response: str | None = None
+
