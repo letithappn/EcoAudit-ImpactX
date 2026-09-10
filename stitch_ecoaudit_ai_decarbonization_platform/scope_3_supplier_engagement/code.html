@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary-fixed":"#d6e3fe","surface-container-highest":"#d3e4fe","inverse-primary":"#bac7e1","error-container":"#ffdad6","secondary-container":"#4069f2","surface-dim":"#cbdbf5","inverse-on-surface":"#eaf1ff","on-error":"#ffffff","tertiary-container":"#002114","on-tertiary":"#ffffff","surface-container-high":"#dce9ff","on-error-container":"#93000a","primary-container":"#0e1c2f","on-background":"#0b1c30","outline":"#75777d","surface-tint":"#525f75","tertiary-fixed":"#85f8c4","tertiary":"#000000","secondary-fixed":"#dce1ff","secondary-fixed-dim":"#b7c4ff","error":"#ba1a1a","background":"#f8f9ff","on-secondary-fixed-variant":"#0039b5","surface-container-low":"#eff4ff","outline-variant":"#c5c6cd","primary-fixed-dim":"#bac7e1","primary":"#000000","tertiary-fixed-dim":"#68dba9","on-tertiary-fixed":"#002114","on-secondary-container":"#fffbff","surface-variant":"#d3e4fe","surface-bright":"#f8f9ff","on-tertiary-fixed-variant":"#005137","surface":"#f8f9ff","secondary":"#1d4ed8","surface-container":"#e5eeff","on-surface":"#0b1c30","on-primary-fixed":"#0e1c2f","on-surface-variant":"#44474c","surface-container-lowest":"#ffffff","on-secondary-fixed":"#001551","on-tertiary-container":"#069669","on-primary":"#ffffff","on-primary-container":"#77849c","inverse-surface":"#213145","on-secondary":"#ffffff","on-primary-fixed-variant":"#3a475c"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-screen":"1.5rem","space-xs":"0.25rem","space-3xl":"2.5rem","space-4xl":"3rem","space-2xl":"2rem","space-sm":"0.5rem","space-base":"1rem","space-xl":"1.5rem","gutter-default":"1.25rem","space-2xs":"0.125rem","space-md":"0.75rem","gutter-compact":"0.75rem","space-lg":"1.25rem"},"fontFamily":{"mono-data":["Inter"],"display-lg":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-xl":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"metric-xl":["Plus Jakarta Sans"],"body-lg":["Inter"],"label-md":["Inter"],"label-sm":["Inter"],"headline-lg":["Plus Jakarta Sans"],"metric-md":["Plus Jakarta Sans"],"body-sm":["Inter"]},"fontSize":{"mono-data":["12px",{"lineHeight":"16px","letterSpacing":"0","fontWeight":"500"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"700"}],"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-xl":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"metric-xl":["32px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["15px",{"lineHeight":"22px","fontWeight":"400"}],"label-md":["13px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"headline-lg":["22px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"metric-md":["20px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-primary-container text-on-primary border-r border-outline-variant/20 z-50 flex flex-col justify-between select-none shadow-[0_1px_8px_rgba(0,0,0,0.08)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center justify-between border-b border-outline-variant/15"><div class="flex items-center gap-space-sm"><img alt="EcoAudit AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WJ2lyfx9NDK8-KOiwWOrJ5XpLFHpGbKeKluoUjkBcRcFlQv3ST-F2PzR59-XLEXdUdLLsKTFCHIcmJdGVF3ece-n9hsLrEVXFXNfVQVkgvbPkiVdI08XwgeqW8BzTcbE-Lxy-UEWapruiLswwaITtvV_yS-GMCwEClz6buJ4eUXMEHvepzP60hallrgBG3EH1-f-jBMQt0QZXb_5x4Z_ftsoX3XOQoYS5XXYkIJXQIXZfE9dlB0pEy1w"/><span class="font-headline-md text-headline-md font-bold tracking-tight text-on-primary">EcoAudit<span class="text-secondary-fixed">AI</span></span></div><span class="px-space-xs py-space-2xs bg-surface-tint/20 text-secondary-fixed font-mono-data text-[10px] rounded uppercase font-semibold tracking-wider">v3.4 Audited</span></div><div class="px-space-lg pt-space-lg pb-space-xs"><div class="font-label-sm text-label-sm uppercase tracking-widest text-on-primary-container font-semibold">Emission Intelligence</div></div><nav class="flex flex-col gap-space-2xs px-space-md" data-active-classes="bg-secondary text-on-secondary font-semibold shadow-[0_1px_4px_rgba(0,0,0,0.2)]"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-container-high/15 hover:text-inverse-on-surface transition-all group" data-path="executive-overview" href="#"><span class="material-symbols-outlined text-[20px] text-inverse-on-surface/70 group-hover:text-inverse-on-surface">dashboard</span><span class="font-label-md text-label-md">Executive Overview</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-container-high/15 hover:text-inverse-on-surface transition-all group" data-path="cbam-and-product-footprints" href="#"><span class="material-symbols-outlined text-[20px] text-inverse-on-surface/70 group-hover:text-inverse-on-surface">verified</span><span class="font-label-md text-label-md">CBAM &amp; Product Footprints</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-container-high/15 hover:text-inverse-on-surface transition-all group" data-path="multi-year-esg-targets" href="#"><span class="material-symbols-outlined text-[20px] text-inverse-on-surface/70 group-hover:text-inverse-on-surface">trending_down</span><span class="font-label-md text-label-md">Multi-Year ESG Targets</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-container-high/15 hover:text-inverse-on-surface transition-all group" data-path="scope-3-and-suppliers" href="#"><span class="material-symbols-outlined text-[20px] text-inverse-on-surface/70 group-hover:text-inverse-on-surface">local_shipping</span><span class="font-label-md text-label-md">Scope 3 &amp; Suppliers</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-container-high/15 hover:text-inverse-on-surface transition-all group" data-path="carbon-balance-ledger" href="#"><span class="material-symbols-outlined text-[20px] text-inverse-on-surface/70 group-hover:text-inverse-on-surface">account_balance</span><span class="font-label-md text-label-md">Carbon Balance Ledger</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-container-high/15 hover:text-inverse-on-surface transition-all group" data-path="decarbonization-simulator" href="#"><span class="material-symbols-outlined text-[20px] text-inverse-on-surface/70 group-hover:text-inverse-on-surface">tune</span><span class="font-label-md text-label-md">Decarbonization Simulator</span></a></nav></div><div class="p-space-md border-t border-outline-variant/15 bg-primary-container/90"><div class="p-space-sm bg-surface-container-low/10 rounded-lg border border-outline-variant/20 flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-tertiary-fixed font-semibold flex items-center gap-space-2xs"><span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-pulse"></span>Engine Active</span><span class="font-mono-data text-mono-data text-on-primary-container text-[11px]">GHG Protocol</span></div><p class="font-body-sm text-body-sm text-inverse-on-surface/70 text-[11px] leading-tight">Double-entry Scope 1, 2 &amp; 3 Ledger aligned with CBAM Regulation (EU) 2023/956.</p></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-md z-40 flex items-center justify-between px-space-xl border-b border-outline-variant/30 shadow-[0_1px_3px_rgba(11,28,48,0.04)]"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded-lg border border-outline-variant/40"><span class="material-symbols-outlined text-[18px] text-secondary">domain</span><span class="font-label-md text-label-md text-on-surface font-semibold">Global Operations (All 14 Facilities)</span><span class="text-outline-variant">|</span><span class="font-mono-data text-mono-data text-on-surface-variant font-medium">FY2024 / Q3 CBAM Cycle</span><span class="material-symbols-outlined text-[18px] text-on-surface-variant cursor-pointer">arrow_drop_down</span></div><div class="flex items-center gap-space-xs bg-tertiary-container/10 text-on-tertiary-container px-space-md py-space-xs rounded-full border border-tertiary-fixed/30 font-label-sm text-label-sm font-semibold"><span class="material-symbols-outlined text-[16px] text-on-tertiary-container">task_alt</span><span>CBAM Readiness: 94.2% Audit Ready</span></div></div><div class="flex items-center gap-space-lg"><button class="flex items-center gap-space-xs bg-surface-container-low hover:bg-surface-container text-on-surface px-space-sm py-space-xs rounded-lg border border-outline-variant/40 text-label-sm font-label-sm font-medium" type="button"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">search</span><span class="text-on-surface-variant">Quick Search</span><kbd class="px-space-2xs py-[1px] bg-surface-container-high rounded text-[10px] font-mono-data text-on-surface-variant">⌘K</kbd></button><button class="flex items-center gap-space-xs bg-secondary hover:bg-secondary/90 text-on-secondary px-space-md py-space-xs rounded-lg font-label-md text-label-md font-semibold transition-colors shadow-[0_1px_3px_rgba(29,78,216,0.3)]" type="button"><span class="material-symbols-outlined text-[18px]">add_circle</span><span>+ New Ingestion / Audit Run</span></button><div class="relative flex items-center cursor-pointer"><span class="material-symbols-outlined text-[22px] text-on-surface-variant hover:text-on-surface transition-colors">notifications</span><span class="absolute -top-1 -right-1 w-4 h-4 bg-error text-on-error rounded-full text-[10px] font-bold flex items-center justify-center font-mono-data">3</span></div><div class="h-8 w-px bg-outline-variant/30"></div><div class="flex items-center gap-space-sm"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-semibold">Dr. Aris Thorne</span><span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Chief Sustainability Officer</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE4xB_bO5qA8LkO-gSQ-h6j0nSs1bpNltBCLPmlim_7V0XiLRoAx3gZkiuWNTcc-eg-Ed_2-fNMfrAvnCqPb6r2fC9SnPEeu0CeK8-kWN_ga7OLNK56EOWMOJlroZzk1dB5czjOUasMRydMUCWN0pDefKbLqMHgVYqc0xsTc4NqGhX-xh_RS9vPNQf6m6TtapAq9tIuD3CZ_CwOs5fdEjr7l78fQS4L32XUj1wBi5NDEOOYMJkp5iq"/></div></div></header><main class="w-full pt-16 flex-1 bg-surface"><div class="flex flex-col w-full">
+<div class="p-space-xl flex flex-col gap-space-xl">
+<!-- Top Action & Navigation Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider mb-space-2xs">
+<span>Scope 3 Protocol</span>
+<span>/</span>
+<span>Category 1: Purchased Goods &amp; Services</span>
+<span>/</span>
+<span class="text-secondary font-semibold">Tier-1 Primary Ledger</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Scope 3 Upstream &amp; Supplier Carbon Intelligence</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">
+          Primary emissions data intake, supplier footprint completeness, automated survey outreach, and verifiable data requests.
+        </p>
+</div>
+<div class="flex items-center gap-space-md shrink-0">
+<button class="flex items-center gap-space-xs bg-surface-container-high hover:bg-surface-container-highest text-on-surface px-space-md py-space-sm rounded-lg font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Bulk Export Scope 3 Inventory</span>
+</button>
+<button class="flex items-center gap-space-xs bg-secondary hover:bg-secondary/90 text-on-secondary px-space-md py-space-sm rounded-lg font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">campaign</span>
+<span>+ Launch Supplier Intake Campaign</span>
+</button>
+</div>
+</div>
+<!-- Summary KPI Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-lg">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Total Active Tier-1</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-metric-xl text-metric-xl text-on-surface">348</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Vendors</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">corporate_fare</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">public</span>
+            22 Manufacturing Countries
+          </span>
+<span class="font-mono-data text-mono-data text-[11px] text-on-tertiary-container bg-tertiary-container/10 px-space-xs py-[2px] rounded">100% Mapped</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Spend Primary Coverage</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-metric-xl text-metric-xl text-on-surface">74.8%</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold flex items-center">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +32.8%
+              </span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex flex-col gap-space-2xs">
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 74.8%;"></div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Primary PCF vs 42% in FY23 baseline</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Inbound Carbon Delta</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-metric-xl text-metric-xl text-on-tertiary-container">-14.2%</span>
+<span class="font-label-md text-label-md text-on-surface-variant">vs DEFRA</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-tertiary-container/10 flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined text-[24px]">energy_savings_leaf</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Measured primary reduction</span>
+<span class="font-mono-data text-mono-data text-[11px] text-secondary font-semibold">18,410 tCO₂e Saved</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Data Requests Lifecycle</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-metric-xl text-metric-xl text-on-surface">316</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Intake runs</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">assignment_turned_in</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center gap-space-sm">
+<span class="font-mono-data text-mono-data text-[11px] text-on-tertiary-container bg-tertiary-container/10 px-space-xs py-[2px] rounded">284 Approved</span>
+<span class="font-mono-data text-mono-data text-[11px] text-secondary bg-surface-container-high px-space-xs py-[2px] rounded">24 In Review</span>
+<span class="font-mono-data text-mono-data text-[11px] text-error bg-error-container px-space-xs py-[2px] rounded">8 Overdue</span>
+</div>
+</div>
+</div>
+<!-- Main Workspace: Table with Drawer -->
+<div class="flex flex-col xl:flex-row gap-space-lg items-start">
+<!-- Data Table Main Card -->
+<div class="flex-1 w-full bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Filter Tabs & Quick Actions -->
+<div class="p-space-md bg-surface-container-low/50 flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<!-- Filter Tabs -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-space-2xs md:pb-0" id="supplierTabs">
+<button class="tab-btn active bg-secondary text-on-secondary px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all shadow-sm" data-category="all" type="button">
+              All Suppliers (348)
+            </button>
+<button class="tab-btn bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all" data-category="priority" type="button">
+              High Emission Priority (Top 20% Spend)
+            </button>
+<button class="tab-btn bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all" data-category="pending" type="button">
+              Pending Responses (32)
+            </button>
+<button class="tab-btn bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all" data-category="audit" type="button">
+              Awaiting Audit (14)
+            </button>
+<button class="tab-btn bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all" data-category="approved" type="button">
+              Approved Primary Data (284)
+            </button>
+</div>
+<!-- Search & Filter Controls -->
+<div class="flex items-center gap-space-sm">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant absolute left-2.5">search</span>
+<input class="pl-8 pr-space-md py-1.5 bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-secondary text-xs w-48 lg:w-64" id="tableSearchInput" placeholder="Search supplier, material, EPD..." type="text"/>
+</div>
+<button class="flex items-center gap-space-2xs bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant px-space-sm py-1.5 rounded-lg font-label-md text-label-md transition-colors text-xs" type="button">
+<span class="material-symbols-outlined text-[16px]">filter_list</span>
+<span>Filter</span>
+</button>
+</div>
+</div>
+<!-- High-Density Responsive Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left" id="supplierTable">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-space-md font-semibold">Supplier Name &amp; Geography</th>
+<th class="py-space-sm px-space-md font-semibold">Inbound Commodity &amp; Volume</th>
+<th class="py-space-sm px-space-md font-semibold">Embodied Carbon Factor</th>
+<th class="py-space-sm px-space-md font-semibold">Reporting Tier &amp; Audit Body</th>
+<th class="py-space-sm px-space-md font-semibold">Status</th>
+<th class="py-space-sm px-space-md font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-md text-body-md">
+<!-- Row 1: Nordic Green Steel -->
+<tr class="hover:bg-surface-container-low/40 transition-colors cursor-pointer bg-surface-container-low/20" onclick="selectSupplier('nordic')">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary font-label-md text-label-md font-bold">NG</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Nordic Green Steel AB</span>
+<span class="px-space-xs py-[1px] bg-tertiary-container/10 text-on-tertiary-container rounded text-[10px] font-mono-data font-semibold">Tier-1 High</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px]">flag</span> Luleå, Sweden
+                      </span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Low-carbon HBI iron pellets</span>
+<span class="font-mono-data text-mono-data text-on-surface-variant text-[11px]">45,000 MT / yr (Inbound)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-mono-data text-mono-data text-on-surface font-semibold">0.78 tCO₂e/MT</span>
+<span class="px-space-xs py-[2px] bg-tertiary-container/10 text-on-tertiary-container rounded font-mono-data text-[10px] font-bold">-59.8% greener</span>
+</div>
+<span class="font-mono-data text-mono-data text-on-surface-variant text-[11px]">vs 1.94 tCO₂e/MT DEFRA proxy</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">GHG Cat 1 (Cradle-to-Gate)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px] text-on-tertiary-container">verified</span> Primary EPD verified by Bureau Veritas
+                    </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded-full bg-tertiary-container/10 text-on-tertiary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+                    Verified &amp; Locked
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-space-xs" onclick="event.stopPropagation()">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" onclick="selectSupplier('nordic')" title="Inspect Activity Data" type="button">
+<span class="material-symbols-outlined text-[18px]">analytics</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" onclick="openQuickMessage('Nordic Green Steel AB')" title="Send Clarification Request" type="button">
+<span class="material-symbols-outlined text-[18px]">outgoing_mail</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" onclick="selectSupplier('nordic')" title="View Audit Trail" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Rheinland Aluguss -->
+<tr class="hover:bg-surface-container-low/40 transition-colors cursor-pointer" onclick="selectSupplier('rheinland')">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface font-label-md text-label-md font-bold">RA</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Rheinland Aluguss GmbH</span>
+<span class="px-space-xs py-[1px] bg-secondary-fixed text-on-secondary-fixed rounded text-[10px] font-mono-data font-semibold">Tier-1</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px]">flag</span> Duisburg, Germany
+                      </span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Secondary aluminum ingots</span>
+<span class="font-mono-data text-mono-data text-on-surface-variant text-[11px]">22,000 MT / yr (Inbound)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-mono-data text-mono-data text-on-surface font-semibold">1.45 tCO₂e/MT</span>
+<span class="px-space-xs py-[2px] bg-tertiary-container/10 text-on-tertiary-container rounded font-mono-data text-[10px] font-bold">-78.2% greener</span>
+</div>
+<span class="font-mono-data text-mono-data text-on-surface-variant text-[11px]">vs 6.67 tCO₂e/MT Virgin Aluminum</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">ISO 14067 Product Footprint</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px] text-secondary">hourglass_empty</span> TÜV SÜD In-Progress Audit
+                    </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded-full bg-secondary/10 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">pending_actions</span>
+                    In Review by Auditor
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-space-xs" onclick="event.stopPropagation()">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" onclick="selectSupplier('rheinland')" title="Inspect Activity Data" type="button">
+<span class="material-symbols-outlined text-[18px]">analytics</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" onclick="openQuickMessage('Rheinland Aluguss GmbH')" title="Send Clarification Request" type="button">
+<span class="material-symbols-outlined text-[18px]">outgoing_mail</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" onclick="selectSupplier('rheinland')" title="View Audit Trail" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Vanderbilt Chemical -->
+<tr class="hover:bg-surface-container-low/40 transition-colors cursor-pointer" onclick="selectSupplier('vanderbilt')">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface font-label-md text-label-md font-bold">VC</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Vanderbilt Chemical Corp</span>
+<span class="px-space-xs py-[1px] bg-secondary-fixed text-on-secondary-fixed rounded text-[10px] font-mono-data font-semibold">Tier-1</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px]">flag</span> Texas, United States
+                      </span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Specialty resins &amp; bonding agents</span>
+<span class="font-mono-data text-mono-data text-on-surface-variant text-[11px]">6,800 MT / yr (Inbound)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-mono-data text-mono-data text-on-surface font-semibold">2.91 tCO₂e/MT</span>
+<span class="px-space-xs py-[2px] bg-surface-container-high text-on-surface-variant rounded font-mono-data text-[10px] font-bold">+1.2% baseline</span>
+</div>
+<span class="font-mono-data text-mono-data text-on-surface-variant text-[11px]">vs 2.88 tCO₂e/MT US EEIO proxy</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Corporate-level Allocation (Draft)</span>
+<span class="font-body-sm text-body-sm text-error text-[11px] flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px] text-error">warning</span> Non-compliant Scope 1/2 disaggregation
+                    </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">report_problem</span>
+                    Action Required: Missing Allocation
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-space-xs" onclick="event.stopPropagation()">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" onclick="selectSupplier('vanderbilt')" title="Inspect Activity Data" type="button">
+<span class="material-symbols-outlined text-[18px]">analytics</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" onclick="openQuickMessage('Vanderbilt Chemical Corp')" title="Send Clarification Request" type="button">
+<span class="material-symbols-outlined text-[18px]">outgoing_mail</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" onclick="selectSupplier('vanderbilt')" title="View Audit Trail" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Kanto Industrial Alloys -->
+<tr class="hover:bg-surface-container-low/40 transition-colors cursor-pointer" onclick="selectSupplier('kanto')">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface font-label-md text-label-md font-bold">KI</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Kanto Industrial Alloys</span>
+<span class="px-space-xs py-[1px] bg-secondary-fixed text-on-secondary-fixed rounded text-[10px] font-mono-data font-semibold">Tier-1</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px]">flag</span> Kanagawa, Japan
+                      </span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Precision forged titanium fittings</span>
+<span class="font-mono-data text-mono-data text-on-surface-variant text-[11px]">3,400 MT / yr (Inbound)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-mono-data text-mono-data text-on-surface font-semibold">11.20 tCO₂e/MT</span>
+<span class="px-space-xs py-[2px] bg-tertiary-container/10 text-on-tertiary-container rounded font-mono-data text-[10px] font-bold">-22.5% greener</span>
+</div>
+<span class="font-mono-data text-mono-data text-on-surface-variant text-[11px]">vs 14.45 tCO₂e/MT Ti Secondary Avg</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">GHG Cat 1 (Cradle-to-Gate)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px] text-on-tertiary-container">verified</span> DNV GL ISO 14044 Verified
+                    </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded-full bg-tertiary-container/10 text-on-tertiary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+                    Verified &amp; Locked
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-space-xs" onclick="event.stopPropagation()">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" onclick="selectSupplier('kanto')" title="Inspect Activity Data" type="button">
+<span class="material-symbols-outlined text-[18px]">analytics</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" onclick="openQuickMessage('Kanto Industrial Alloys')" title="Send Clarification Request" type="button">
+<span class="material-symbols-outlined text-[18px]">outgoing_mail</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" onclick="selectSupplier('kanto')" title="View Audit Trail" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Borealis Polyolefins -->
+<tr class="hover:bg-surface-container-low/40 transition-colors cursor-pointer" onclick="selectSupplier('borealis')">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface font-label-md text-label-md font-bold">BP</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Borealis Polyolefins</span>
+<span class="px-space-xs py-[1px] bg-secondary-fixed text-on-secondary-fixed rounded text-[10px] font-mono-data font-semibold">Tier-1</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px]">flag</span> Vienna, Austria
+                      </span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Bio-circular polypropylene granulate</span>
+<span class="font-mono-data text-mono-data text-on-surface-variant text-[11px]">12,500 MT / yr (Inbound)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-mono-data text-mono-data text-on-surface font-semibold">0.92 tCO₂e/MT</span>
+<span class="px-space-xs py-[2px] bg-tertiary-container/10 text-on-tertiary-container rounded font-mono-data text-[10px] font-bold">-48.9% greener</span>
+</div>
+<span class="font-mono-data text-mono-data text-on-surface-variant text-[11px]">vs 1.80 tCO₂e/MT Fossil PP</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">ISCC PLUS &amp; EPD Cycle</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px] text-secondary">schedule</span> Intake Survey Dispatched
+                    </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">send</span>
+                    Survey Dispatched
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-space-xs" onclick="event.stopPropagation()">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" onclick="selectSupplier('borealis')" title="Inspect Activity Data" type="button">
+<span class="material-symbols-outlined text-[18px]">analytics</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" onclick="openQuickMessage('Borealis Polyolefins')" title="Send Clarification Request" type="button">
+<span class="material-symbols-outlined text-[18px]">outgoing_mail</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" onclick="selectSupplier('borealis')" title="View Audit Trail" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination and Metadata Footer -->
+<div class="p-space-md bg-surface-container-low/30 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-md">
+<span>Showing <span class="font-semibold text-on-surface">1 - 5</span> of <span class="font-semibold text-on-surface">348</span> Suppliers</span>
+<span class="text-outline-variant">|</span>
+<span class="font-mono-data text-mono-data text-[11px]">Primary Ingestion Stream: API &amp; Peppol Directory</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest border border-outline-variant/30 text-on-surface-variant hover:text-on-surface disabled:opacity-40" disabled="" type="button">Previous</button>
+<span class="px-space-sm py-1 rounded bg-secondary text-on-secondary font-semibold font-mono-data">1</span>
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest border border-outline-variant/30 text-on-surface hover:bg-surface-container font-mono-data" type="button">2</button>
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest border border-outline-variant/30 text-on-surface hover:bg-surface-container font-mono-data" type="button">3</button>
+<span class="text-on-surface-variant px-1">...</span>
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest border border-outline-variant/30 text-on-surface hover:bg-surface-container font-mono-data" type="button">70</button>
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest border border-outline-variant/30 text-on-surface hover:bg-surface-container" type="button">Next</button>
+</div>
+</div>
+</div>
+<!-- Audit History & Communication Drawer -->
+<aside class="w-full xl:w-[420px] bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col shrink-0" id="auditDrawer">
+<!-- Drawer Header -->
+<div class="p-space-md bg-primary-container text-on-primary flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed">verified</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold leading-tight" id="drawerSupplierTitle">Nordic Green Steel AB</span>
+<span class="font-mono-data text-mono-data text-inverse-on-surface/70 text-[11px]">Audit Trail &amp; Exchange Log</span>
+</div>
+</div>
+<span class="px-space-xs py-[2px] bg-tertiary-fixed/20 text-tertiary-fixed font-mono-data text-[10px] rounded uppercase font-semibold">Active File</span>
+</div>
+<!-- Supplier Overview Snippet -->
+<div class="p-space-md bg-surface-container-low/40 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Inbound Material:</span>
+<span class="font-semibold text-on-surface" id="drawerMaterial">Low-carbon HBI Iron Pellets</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Primary Factor:</span>
+<span class="font-mono-data text-mono-data font-bold text-on-tertiary-container" id="drawerFactor">0.78 tCO₂e/MT (-59.8%)</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Auditor Sign-off:</span>
+<span class="font-label-sm text-label-sm font-semibold text-secondary flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Dr. Aris Thorne (Oct 24)
+            </span>
+</div>
+</div>
+<!-- Audit Timeline -->
+<div class="p-space-md flex flex-col gap-space-md max-h-[380px] overflow-y-auto">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Verification Chronology</span>
+<!-- Timeline Event 1 -->
+<div class="flex items-start gap-space-md relative pb-space-md">
+<div class="w-7 h-7 rounded-full bg-secondary-container/15 flex items-center justify-center text-secondary shrink-0 z-10">
+<span class="material-symbols-outlined text-[16px]">upload_file</span>
+</div>
+<div class="flex flex-col flex-1 bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface">ISO 14025 EPD Uploaded</span>
+<span class="font-mono-data text-mono-data text-[10px] text-on-surface-variant">Sep 18, 2024</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Supplier submitted verified Third-Party EPD certified by Bureau Veritas.
+              </p>
+<div class="mt-2 flex items-center gap-space-xs bg-surface-container-lowest p-1.5 rounded text-xs font-mono-data text-secondary cursor-pointer hover:underline">
+<span class="material-symbols-outlined text-[16px] text-error">picture_as_pdf</span>
+<span>EPD_NordicGreen_HBI_2024.pdf (4.2 MB)</span>
+</div>
+</div>
+</div>
+<!-- Timeline Event 2 -->
+<div class="flex items-start gap-space-md relative pb-space-md">
+<div class="w-7 h-7 rounded-full bg-tertiary-container/15 flex items-center justify-center text-on-tertiary-container shrink-0 z-10">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+</div>
+<div class="flex flex-col flex-1 bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Automated AI Validation</span>
+<span class="font-mono-data text-mono-data text-[10px] text-on-surface-variant">Sep 19, 2024</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Engine matched mass-balance calculation with green hydrogen stoichiometry. Renewable PPA volume confirmed.
+              </p>
+<span class="mt-1 font-mono-data text-[10px] text-on-tertiary-container font-semibold">Algorithm Confidence: 99.4% Pass</span>
+</div>
+</div>
+<!-- Timeline Event 3 -->
+<div class="flex items-start gap-space-md relative pb-space-md">
+<div class="w-7 h-7 rounded-full bg-error-container flex items-center justify-center text-error shrink-0 z-10">
+<span class="material-symbols-outlined text-[16px]">flag</span>
+</div>
+<div class="flex flex-col flex-1 bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Verifier Query Raised</span>
+<span class="font-mono-data text-mono-data text-[10px] text-on-surface-variant">Sep 20, 2024</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                "Scope 2 emission factor in furnace module uses Nordic residual mix instead of contracted hydro PPA."
+              </p>
+<span class="mt-1 font-label-sm text-label-sm text-on-surface font-semibold text-[11px]">— Flagged by Lead Verifier</span>
+</div>
+</div>
+<!-- Timeline Event 4 -->
+<div class="flex items-start gap-space-md relative">
+<div class="w-7 h-7 rounded-full bg-tertiary-container/20 flex items-center justify-center text-on-tertiary-container shrink-0 z-10">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+</div>
+<div class="flex flex-col flex-1 bg-tertiary-container/10 p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface">PPA Proof &amp; Final Approval</span>
+<span class="font-mono-data text-mono-data text-[10px] text-on-surface-variant">Sep 22, 2024</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Supplier provided Guarantee of Origin (GoO) certificate serial numbers. Verified by Dr. Thorne. Factor locked into Q3 Balance Ledger.
+              </p>
+</div>
+</div>
+</div>
+<!-- Quick Send Form -->
+<div class="p-space-md bg-surface-container-low/60 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Send Primary Clarification Request</span>
+<span class="font-mono-data text-mono-data text-[10px] text-secondary">Secured Channel</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<select class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm p-space-xs rounded border border-outline-variant/40 focus:outline-none focus:ring-1 focus:ring-secondary">
+<option>Request Revised Allocation / Scope 2 PPA Proof</option>
+<option>Inquire on Cradle-to-Gate System Boundaries</option>
+<option>Request Missing Mass Balance Certificate</option>
+<option>Submit Formal Audit Finding Notification</option>
+</select>
+<textarea class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm p-space-xs rounded border border-outline-variant/40 focus:outline-none focus:ring-1 focus:ring-secondary resize-none" placeholder="Enter specific audit query or instruction for supplier carbon officer..." rows="2"></textarea>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">attachment</span> Attach guidelines
+            </span>
+<button class="bg-secondary hover:bg-secondary/90 text-on-secondary px-space-md py-space-xs rounded font-label-md text-label-md text-xs font-semibold flex items-center gap-1 transition-colors" onclick="dispatchNotice()" type="button">
+<span class="material-symbols-outlined text-[14px]">send</span>
+<span>Dispatch Request</span>
+</button>
+</div>
+</div>
+</aside>
+</div>
+<!-- Interactive Batch Campaign Dispatch Modal (Simulated hidden trigger) -->
+<div class="fixed bottom-6 right-6 bg-primary-container text-on-primary px-space-lg py-space-md rounded-xl shadow-xl z-50 flex items-center gap-space-md transform translate-y-32 transition-transform duration-300" id="quickToast">
+<span class="material-symbols-outlined text-[24px] text-tertiary-fixed">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-primary" id="toastTitle">Clarification Dispatched</span>
+<span class="font-body-sm text-body-sm text-inverse-on-surface/80 text-[11px]" id="toastMessage">Official supplier request logged to SHA-256 audit ledger.</span>
+</div>
+<button class="text-inverse-on-surface/60 hover:text-inverse-on-surface" onclick="closeToast()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Tab Filter Logic
+  const tabs = document.querySelectorAll('#supplierTabs .tab-btn');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => {
+        t.classList.remove('bg-secondary', 'text-on-secondary', 'shadow-sm');
+        t.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+      });
+      tab.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+      tab.classList.add('bg-secondary', 'text-on-secondary', 'shadow-sm');
+    });
+  });
+
+  // Table Search Filter Logic
+  const searchInput = document.getElementById('tableSearchInput');
+  const tableRows = document.querySelectorAll('#supplierTable tbody tr');
+  searchInput.addEventListener('input', (e) => {
+    const val = e.target.value.toLowerCase();
+    tableRows.forEach(row => {
+      const text = row.innerText.toLowerCase();
+      row.style.display = text.includes(val) ? '' : 'none';
+    });
+  });
+
+  // Supplier Data Profiles for Drawer
+  const supplierProfiles = {
+    nordic: {
+      name: 'Nordic Green Steel AB',
+      material: 'Low-carbon HBI Iron Pellets',
+      factor: '0.78 tCO₂e/MT (-59.8%)',
+      auditor: 'Dr. Aris Thorne (Oct 24)',
+    },
+    rheinland: {
+      name: 'Rheinland Aluguss GmbH',
+      material: 'Secondary Aluminum Ingots',
+      factor: '1.45 tCO₂e/MT (-78.2%)',
+      auditor: 'TÜV SÜD In-Progress',
+    },
+    vanderbilt: {
+      name: 'Vanderbilt Chemical Corp',
+      material: 'Specialty Resins & Bonding Agents',
+      factor: '2.91 tCO₂e/MT (+1.2%)',
+      auditor: 'Action Required: Pending Resubmission',
+    },
+    kanto: {
+      name: 'Kanto Industrial Alloys',
+      material: 'Precision Forged Titanium Fittings',
+      factor: '11.20 tCO₂e/MT (-22.5%)',
+      auditor: 'DNV GL Verification Team',
+    },
+    borealis: {
+      name: 'Borealis Polyolefins',
+      material: 'Bio-circular Polypropylene Granulate',
+      factor: '0.92 tCO₂e/MT (-48.9%)',
+      auditor: 'Intake Survey Phase',
+    }
+  };
+
+  function selectSupplier(id) {
+    const data = supplierProfiles[id];
+    if (!data) return;
+
+    document.getElementById('drawerSupplierTitle').innerText = data.name;
+    document.getElementById('drawerMaterial').innerText = data.material;
+    document.getElementById('drawerFactor').innerText = data.factor;
+    
+    // Highlight selected row styling
+    tableRows.forEach(row => row.classList.remove('bg-surface-container-low/40'));
+  }
+
+  function openQuickMessage(supplierName) {
+    document.getElementById('drawerSupplierTitle').innerText = supplierName;
+    const toast = document.getElementById('quickToast');
+    document.getElementById('toastTitle').innerText = 'Audit Channel Ready';
+    document.getElementById('toastMessage').innerText = 'Engaged communication channel for ' + supplierName;
+    showToast();
+  }
+
+  function dispatchNotice() {
+    const toast = document.getElementById('quickToast');
+    document.getElementById('toastTitle').innerText = 'Request Dispatched';
+    document.getElementById('toastMessage').innerText = 'Formal clarification request dispatched & logged to ledger.';
+    showToast();
+  }
+
+  function showToast() {
+    const toast = document.getElementById('quickToast');
+    toast.classList.remove('translate-y-32');
+    toast.classList.add('translate-y-0');
+    setTimeout(closeToast, 4000);
+  }
+
+  function closeToast() {
+    const toast = document.getElementById('quickToast');
+    toast.classList.remove('translate-y-0');
+    toast.classList.add('translate-y-32');
+  }
+</script></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 py-space-sm px-space-xl"><div class="w-full flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><div class="flex items-center gap-space-lg"><span class="flex items-center gap-space-xs text-on-surface"><span class="material-symbols-outlined text-[16px] text-on-tertiary-container">verified_user</span><span>ISO 14064-1/2:2018 Certified Accounting</span></span><span class="text-outline-variant">•</span><span class="flex items-center gap-space-xs"><span>GHG Protocol Corporate Standard Scope 1-3 Compliant</span></span><span class="text-outline-variant">•</span><span class="font-mono-data text-mono-data text-[11px]">Regulatory Telemetry Sync: Oct 24, 2024 — 14:02:18 UTC</span></div><div class="flex items-center gap-space-md"><span class="font-mono-data text-mono-data text-[11px] bg-surface-container-low px-space-xs py-[2px] rounded border border-outline-variant/30">Ledger Node: EU-WEST-1 (Immutable SHA-256)</span><span class="text-on-surface-variant">© 2024 EcoAudit AI Systems</span></div></div></footer></div></body></html>

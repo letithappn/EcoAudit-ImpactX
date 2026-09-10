@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary-fixed":"#d6e3fe","surface-container-highest":"#d3e4fe","inverse-primary":"#bac7e1","error-container":"#ffdad6","secondary-container":"#4069f2","surface-dim":"#cbdbf5","inverse-on-surface":"#eaf1ff","on-error":"#ffffff","tertiary-container":"#002114","on-tertiary":"#ffffff","surface-container-high":"#dce9ff","on-error-container":"#93000a","primary-container":"#0e1c2f","on-background":"#0b1c30","outline":"#75777d","surface-tint":"#525f75","tertiary-fixed":"#85f8c4","tertiary":"#000000","secondary-fixed":"#dce1ff","secondary-fixed-dim":"#b7c4ff","error":"#ba1a1a","background":"#f8f9ff","on-secondary-fixed-variant":"#0039b5","surface-container-low":"#eff4ff","outline-variant":"#c5c6cd","primary-fixed-dim":"#bac7e1","primary":"#000000","tertiary-fixed-dim":"#68dba9","on-tertiary-fixed":"#002114","on-secondary-container":"#fffbff","surface-variant":"#d3e4fe","surface-bright":"#f8f9ff","on-tertiary-fixed-variant":"#005137","surface":"#f8f9ff","secondary":"#1d4ed8","surface-container":"#e5eeff","on-surface":"#0b1c30","on-primary-fixed":"#0e1c2f","on-surface-variant":"#44474c","surface-container-lowest":"#ffffff","on-secondary-fixed":"#001551","on-tertiary-container":"#069669","on-primary":"#ffffff","on-primary-container":"#77849c","inverse-surface":"#213145","on-secondary":"#ffffff","on-primary-fixed-variant":"#3a475c"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-screen":"1.5rem","space-xs":"0.25rem","space-3xl":"2.5rem","space-4xl":"3rem","space-2xl":"2rem","space-sm":"0.5rem","space-base":"1rem","space-xl":"1.5rem","gutter-default":"1.25rem","space-2xs":"0.125rem","space-md":"0.75rem","gutter-compact":"0.75rem","space-lg":"1.25rem"},"fontFamily":{"mono-data":["Inter"],"display-lg":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-xl":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"metric-xl":["Plus Jakarta Sans"],"body-lg":["Inter"],"label-md":["Inter"],"label-sm":["Inter"],"headline-lg":["Plus Jakarta Sans"],"metric-md":["Plus Jakarta Sans"],"body-sm":["Inter"]},"fontSize":{"mono-data":["12px",{"lineHeight":"16px","letterSpacing":"0","fontWeight":"500"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"700"}],"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-xl":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"metric-xl":["32px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["15px",{"lineHeight":"22px","fontWeight":"400"}],"label-md":["13px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"headline-lg":["22px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"metric-md":["20px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-primary-container text-on-primary border-r border-outline-variant/20 z-50 flex flex-col justify-between select-none shadow-[0_1px_8px_rgba(0,0,0,0.08)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center justify-between border-b border-outline-variant/15"><div class="flex items-center gap-space-sm"><img alt="EcoAudit AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WJ2lyfx9NDK8-KOiwWOrJ5XpLFHpGbKeKluoUjkBcRcFlQv3ST-F2PzR59-XLEXdUdLLsKTFCHIcmJdGVF3ece-n9hsLrEVXFXNfVQVkgvbPkiVdI08XwgeqW8BzTcbE-Lxy-UEWapruiLswwaITtvV_yS-GMCwEClz6buJ4eUXMEHvepzP60hallrgBG3EH1-f-jBMQt0QZXb_5x4Z_ftsoX3XOQoYS5XXYkIJXQIXZfE9dlB0pEy1w"/><span class="font-headline-md text-headline-md font-bold tracking-tight text-on-primary">EcoAudit<span class="text-secondary-fixed">AI</span></span></div><span class="px-space-xs py-space-2xs bg-surface-tint/20 text-secondary-fixed font-mono-data text-[10px] rounded uppercase font-semibold tracking-wider">v3.4 Audited</span></div><div class="px-space-lg pt-space-lg pb-space-xs"><div class="font-label-sm text-label-sm uppercase tracking-widest text-on-primary-container font-semibold">Emission Intelligence</div></div><nav class="flex flex-col gap-space-2xs px-space-md" data-active-classes="bg-secondary text-on-secondary font-semibold shadow-[0_1px_4px_rgba(0,0,0,0.2)]"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-container-high/15 hover:text-inverse-on-surface transition-all group" data-path="executive-overview" href="#"><span class="material-symbols-outlined text-[20px] text-inverse-on-surface/70 group-hover:text-inverse-on-surface">dashboard</span><span class="font-label-md text-label-md">Executive Overview</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-container-high/15 hover:text-inverse-on-surface transition-all group" data-path="cbam-and-product-footprints" href="#"><span class="material-symbols-outlined text-[20px] text-inverse-on-surface/70 group-hover:text-inverse-on-surface">verified</span><span class="font-label-md text-label-md">CBAM &amp; Product Footprints</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-container-high/15 hover:text-inverse-on-surface transition-all group" data-path="multi-year-esg-targets" href="#"><span class="material-symbols-outlined text-[20px] text-inverse-on-surface/70 group-hover:text-inverse-on-surface">trending_down</span><span class="font-label-md text-label-md">Multi-Year ESG Targets</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-container-high/15 hover:text-inverse-on-surface transition-all group" data-path="scope-3-and-suppliers" href="#"><span class="material-symbols-outlined text-[20px] text-inverse-on-surface/70 group-hover:text-inverse-on-surface">local_shipping</span><span class="font-label-md text-label-md">Scope 3 &amp; Suppliers</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg transition-all group bg-secondary text-on-secondary font-semibold shadow-[0_1px_4px_rgba(0,0,0,0.2)]" data-path="carbon-balance-ledger" href="#"><span class="material-symbols-outlined text-[20px] text-inverse-on-surface/70 group-hover:text-inverse-on-surface">account_balance</span><span class="font-label-md text-label-md">Carbon Balance Ledger</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-container-high/15 hover:text-inverse-on-surface transition-all group" data-path="decarbonization-simulator" href="#"><span class="material-symbols-outlined text-[20px] text-inverse-on-surface/70 group-hover:text-inverse-on-surface">tune</span><span class="font-label-md text-label-md">Decarbonization Simulator</span></a></nav></div><div class="p-space-md border-t border-outline-variant/15 bg-primary-container/90"><div class="p-space-sm bg-surface-container-low/10 rounded-lg border border-outline-variant/20 flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-tertiary-fixed font-semibold flex items-center gap-space-2xs"><span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-pulse"></span>Engine Active</span><span class="font-mono-data text-mono-data text-on-primary-container text-[11px]">GHG Protocol</span></div><p class="font-body-sm text-body-sm text-inverse-on-surface/70 text-[11px] leading-tight">Double-entry Scope 1, 2 &amp; 3 Ledger aligned with CBAM Regulation (EU) 2023/956.</p></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-md z-40 flex items-center justify-between px-space-xl border-b border-outline-variant/30 shadow-[0_1px_3px_rgba(11,28,48,0.04)]"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded-lg border border-outline-variant/40"><span class="material-symbols-outlined text-[18px] text-secondary">domain</span><span class="font-label-md text-label-md text-on-surface font-semibold">Global Operations (All 14 Facilities)</span><span class="text-outline-variant">|</span><span class="font-mono-data text-mono-data text-on-surface-variant font-medium">FY2024 / Q3 CBAM Cycle</span><span class="material-symbols-outlined text-[18px] text-on-surface-variant cursor-pointer">arrow_drop_down</span></div><div class="flex items-center gap-space-xs bg-tertiary-container/10 text-on-tertiary-container px-space-md py-space-xs rounded-full border border-tertiary-fixed/30 font-label-sm text-label-sm font-semibold"><span class="material-symbols-outlined text-[16px] text-on-tertiary-container">task_alt</span><span>CBAM Readiness: 94.2% Audit Ready</span></div></div><div class="flex items-center gap-space-lg"><button class="flex items-center gap-space-xs bg-surface-container-low hover:bg-surface-container text-on-surface px-space-sm py-space-xs rounded-lg border border-outline-variant/40 text-label-sm font-label-sm font-medium" type="button"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">search</span><span class="text-on-surface-variant">Quick Search</span><kbd class="px-space-2xs py-[1px] bg-surface-container-high rounded text-[10px] font-mono-data text-on-surface-variant">⌘K</kbd></button><button class="flex items-center gap-space-xs bg-secondary hover:bg-secondary/90 text-on-secondary px-space-md py-space-xs rounded-lg font-label-md text-label-md font-semibold transition-colors shadow-[0_1px_3px_rgba(29,78,216,0.3)]" type="button"><span class="material-symbols-outlined text-[18px]">add_circle</span><span>+ New Ingestion / Audit Run</span></button><div class="relative flex items-center cursor-pointer"><span class="material-symbols-outlined text-[22px] text-on-surface-variant hover:text-on-surface transition-colors">notifications</span><span class="absolute -top-1 -right-1 w-4 h-4 bg-error text-on-error rounded-full text-[10px] font-bold flex items-center justify-center font-mono-data">3</span></div><div class="h-8 w-px bg-outline-variant/30"></div><div class="flex items-center gap-space-sm"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-semibold">Dr. Aris Thorne</span><span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Chief Sustainability Officer</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE4xB_bO5qA8LkO-gSQ-h6j0nSs1bpNltBCLPmlim_7V0XiLRoAx3gZkiuWNTcc-eg-Ed_2-fNMfrAvnCqPb6r2fC9SnPEeu0CeK8-kWN_ga7OLNK56EOWMOJlroZzk1dB5czjOUasMRydMUCWN0pDefKbLqMHgVYqc0xsTc4NqGhX-xh_RS9vPNQf6m6TtapAq9tIuD3CZ_CwOs5fdEjr7l78fQS4L32XUj1wBi5NDEOOYMJkp5iq"/></div></div></header><main class="w-full pt-16 flex-1 bg-surface"><div class="flex flex-col w-full">
+<section class="w-full px-space-xl py-space-xl bg-surface">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg mb-space-2xl">
+<div class="flex flex-col max-w-3xl">
+<div class="flex items-center gap-space-xs text-on-surface-variant mb-space-xs font-mono-data text-mono-data uppercase tracking-wider">
+<span class="inline-block w-2 h-2 rounded-full bg-on-tertiary-container"></span>
+<span>ISO 14044 §4.3.4 • Double-Entry Reconciliation</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-bold">
+          Corporate Carbon Balance &amp; Value-Stream Allocation
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">
+          Tracing emissions origin from raw fuels and precursors through manufacturing processes to finished products and general overhead.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-highest text-on-surface hover:bg-surface-container-high transition-colors shadow-sm font-label-md text-label-md" id="rebalanceBtn" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">sync</span>
+<span>Rebalance Allocation Run</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-secondary hover:bg-secondary/90 text-on-secondary transition-all shadow-md font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+<span>Download Immutable Audit Ledger (CSV/JSON)</span>
+</button>
+</div>
+</div>
+<!-- Top Flow Balance Metrics Bento -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-2xl">
+<!-- Card 1 -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Inbound Ingestion</span>
+<span class="p-space-2xs rounded-md bg-surface-container-low text-secondary">
+<span class="material-symbols-outlined text-[18px]">input</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="font-display-lg text-display-lg font-bold text-on-surface tracking-tight">1,428,950</div>
+<div class="flex items-center gap-space-xs font-mono-data text-mono-data text-on-surface-variant mt-space-2xs">
+<span class="font-semibold text-on-surface">tCO₂e</span>
+<span>• Total Inbound Carbon Pool</span>
+</div>
+</div>
+<div class="mt-space-lg w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-full"></div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Product Embedded</span>
+<span class="px-space-xs py-space-2xs rounded-full bg-surface-container-low text-secondary font-mono-data text-mono-data">90.0%</span>
+</div>
+<div class="mt-space-md">
+<div class="font-display-lg text-display-lg font-bold text-on-surface tracking-tight">1,286,055</div>
+<div class="flex items-center gap-space-xs font-mono-data text-mono-data text-on-surface-variant mt-space-2xs">
+<span class="font-semibold text-secondary">tCO₂e</span>
+<span>• Allocated to Finished Goods</span>
+</div>
+</div>
+<div class="mt-space-lg w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[90%] transition-all duration-700"></div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Residual / Facility</span>
+<span class="px-space-xs py-space-2xs rounded-full bg-surface-container-low text-on-surface-variant font-mono-data text-mono-data">10.0%</span>
+</div>
+<div class="mt-space-md">
+<div class="font-display-lg text-display-lg font-bold text-on-surface tracking-tight">142,895</div>
+<div class="flex items-center gap-space-xs font-mono-data text-mono-data text-on-surface-variant mt-space-2xs">
+<span class="font-semibold text-on-surface">tCO₂e</span>
+<span>• Facility Overhead &amp; Waste</span>
+</div>
+</div>
+<div class="mt-space-lg w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-surface-tint h-full w-[10%]"></div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-tertiary-container">Audit Status</span>
+<span class="flex items-center gap-space-2xs px-space-xs py-space-2xs rounded-full bg-tertiary-fixed/30 text-on-tertiary-container font-mono-data text-[11px] font-bold">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+            ZERO DELTA
+          </span>
+</div>
+<div class="mt-space-md">
+<div class="font-display-lg text-display-lg font-bold text-on-tertiary-container tracking-tight">0.00 <span class="text-metric-md font-medium">tCO₂e</span></div>
+<div class="flex items-center gap-space-xs font-mono-data text-mono-data text-on-surface-variant mt-space-2xs">
+<span class="font-semibold text-on-tertiary-container">100% Balanced</span>
+<span>• Full Discrepancy Parity</span>
+</div>
+</div>
+<div class="mt-space-lg w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-on-tertiary-container h-full w-full"></div>
+</div>
+</div>
+</div>
+<!-- Multi-Stage Value-Stream Sankey / Flow Topology -->
+<div class="w-full rounded-xl bg-surface-container-lowest p-space-xl shadow-sm mb-space-2xl">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between pb-space-lg gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm uppercase text-secondary font-bold tracking-wider">
+<span>Mass &amp; Thermodynamic Flow</span>
+<span>•</span>
+<span class="font-mono-data">Multi-Stage Ledger Mapping</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold mt-space-2xs">
+            Value-Stream Carbon Mass Allocation
+          </h2>
+</div>
+<!-- Stage Legends -->
+<div class="flex flex-wrap items-center gap-space-md font-mono-data text-[11px] text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary-container"></span>
+<span>Raw Origins</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-sm bg-secondary"></span>
+<span>Consolidated Scopes</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-sm bg-surface-tint"></span>
+<span>Physical Plants</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-sm bg-tertiary-container"></span>
+<span>Finished Absorption</span>
+</div>
+</div>
+</div>
+<!-- 4-Column Grid Canvas -->
+<div class="relative grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-xl pt-space-md">
+<!-- SVG Connecting Flow Ribbon Layer (Desktop Only) -->
+<div class="absolute inset-0 pointer-events-none hidden xl:block z-0 overflow-hidden">
+<svg class="w-full h-full" fill="none" preserveaspectratio="none" viewbox="0 0 1200 520">
+<defs>
+<lineargradient id="flowG1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#0e1c2f" stop-opacity="0.16"></stop>
+<stop offset="100%" stop-color="#1d4ed8" stop-opacity="0.22"></stop>
+</lineargradient>
+<lineargradient id="flowG2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#1d4ed8" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#525f75" stop-opacity="0.2"></stop>
+</lineargradient>
+<lineargradient id="flowG3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#525f75" stop-opacity="0.22"></stop>
+<stop offset="100%" stop-color="#069669" stop-opacity="0.25"></stop>
+</lineargradient>
+</defs>
+<!-- Column 1 to Column 2 ribbon bundles -->
+<path d="M 280,60 C 330,60 330,110 380,110" fill="none" stroke="url(#flowG1)" stroke-linecap="round" stroke-width="12"></path>
+<path d="M 280,135 C 330,135 330,120 380,120" fill="none" stroke="url(#flowG1)" stroke-linecap="round" stroke-width="8"></path>
+<path d="M 280,210 C 330,210 330,230 380,230" fill="none" stroke="url(#flowG1)" stroke-linecap="round" stroke-width="10"></path>
+<path d="M 280,290 C 330,290 330,370 380,370" fill="none" stroke="url(#flowG1)" stroke-linecap="round" stroke-width="34"></path>
+<path d="M 280,365 C 330,365 330,390 380,390" fill="none" stroke="url(#flowG1)" stroke-linecap="round" stroke-width="16"></path>
+<path d="M 280,440 C 330,440 330,420 380,420" fill="none" stroke="url(#flowG1)" stroke-linecap="round" stroke-width="18"></path>
+<!-- Column 2 to Column 3 ribbon bundles -->
+<path d="M 570,115 C 620,115 620,90 670,90" fill="none" stroke="url(#flowG2)" stroke-linecap="round" stroke-width="16"></path>
+<path d="M 570,125 C 620,125 620,195 670,195" fill="none" stroke="url(#flowG2)" stroke-linecap="round" stroke-width="12"></path>
+<path d="M 570,230 C 620,230 620,210 670,210" fill="none" stroke="url(#flowG2)" stroke-linecap="round" stroke-width="14"></path>
+<path d="M 570,390 C 620,390 620,220 670,220" fill="none" stroke="url(#flowG2)" stroke-linecap="round" stroke-width="26"></path>
+<path d="M 570,410 C 620,410 620,320 670,320" fill="none" stroke="url(#flowG2)" stroke-linecap="round" stroke-width="24"></path>
+<path d="M 570,430 C 620,430 620,430 670,430" fill="none" stroke="url(#flowG2)" stroke-linecap="round" stroke-width="14"></path>
+<!-- Column 3 to Column 4 ribbon bundles -->
+<path d="M 870,90 C 920,90 920,65 970,65" fill="none" stroke="url(#flowG3)" stroke-linecap="round" stroke-width="20"></path>
+<path d="M 870,205 C 920,205 920,80 970,80" fill="none" stroke="url(#flowG3)" stroke-linecap="round" stroke-width="22"></path>
+<path d="M 870,215 C 920,215 920,165 970,165" fill="none" stroke="url(#flowG3)" stroke-linecap="round" stroke-width="24"></path>
+<path d="M 870,320 C 920,320 920,265 970,265" fill="none" stroke="url(#flowG3)" stroke-linecap="round" stroke-width="28"></path>
+<path d="M 870,335 C 920,335 920,365 970,365" fill="none" stroke="url(#flowG3)" stroke-linecap="round" stroke-width="18"></path>
+<path d="M 870,435 C 920,435 920,455 970,455" fill="none" stroke="url(#flowG3)" stroke-linecap="round" stroke-width="16"></path>
+</svg>
+</div>
+<!-- STAGE 1: Primary Origin Inputs -->
+<div class="relative z-10 flex flex-col gap-space-sm">
+<div class="pb-space-xs mb-space-xs">
+<span class="font-label-sm text-label-sm font-bold uppercase text-on-surface tracking-wider">1. Primary Origin Inputs</span>
+<p class="font-mono-data text-[11px] text-on-surface-variant">6 Inbound Stream Sources</p>
+</div>
+<div class="group p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer shadow-sm">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-label-md text-label-md font-semibold">Natural Gas Pipeline</span>
+<span class="font-mono-data text-mono-data font-bold">124.0k t</span>
+</div>
+<div class="flex items-center justify-between font-mono-data text-[11px] text-on-surface-variant mt-space-2xs">
+<span>Stationary Fuel • 8.68%</span>
+<span class="text-secondary font-medium">Scope 1</span>
+</div>
+</div>
+<div class="group p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer shadow-sm">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-label-md text-label-md font-semibold">Metallurgical Coke</span>
+<span class="font-mono-data text-mono-data font-bold">58.4k t</span>
+</div>
+<div class="flex items-center justify-between font-mono-data text-[11px] text-on-surface-variant mt-space-2xs">
+<span>Blast Smelting Agent</span>
+<span class="text-secondary font-medium">Scope 1</span>
+</div>
+</div>
+<div class="group p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer shadow-sm">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-label-md text-label-md font-semibold">Grid Electricity</span>
+<span class="font-mono-data text-mono-data font-bold">98.3k t</span>
+</div>
+<div class="flex items-center justify-between font-mono-data text-[11px] text-on-surface-variant mt-space-2xs">
+<span>Regional High-Voltage Grid</span>
+<span class="text-secondary font-medium">Scope 2</span>
+</div>
+</div>
+<div class="group p-space-md rounded-lg bg-surface-container-high hover:bg-surface-container-highest transition-all cursor-pointer shadow-sm">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-label-md text-label-md font-bold">Inbound Steel / Alloy Precursors</span>
+<span class="font-mono-data text-mono-data font-bold">743.0k t</span>
+</div>
+<div class="flex items-center justify-between font-mono-data text-[11px] text-on-surface-variant mt-space-2xs">
+<span>Pig Iron &amp; DRI Billets</span>
+<span class="text-secondary font-medium">Scope 3 Cat 1</span>
+</div>
+</div>
+<div class="group p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer shadow-sm">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-label-md text-label-md font-semibold">Process Chemicals</span>
+<span class="font-mono-data text-mono-data font-bold">180.2k t</span>
+</div>
+<div class="flex items-center justify-between font-mono-data text-[11px] text-on-surface-variant mt-space-2xs">
+<span>Flux, Lime, Electrode Paste</span>
+<span class="text-secondary font-medium">Scope 3 Cat 1</span>
+</div>
+</div>
+<div class="group p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer shadow-sm">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-label-md text-label-md font-semibold">Freight Logistics</span>
+<span class="font-mono-data text-mono-data font-bold">225.1k t</span>
+</div>
+<div class="flex items-center justify-between font-mono-data text-[11px] text-on-surface-variant mt-space-2xs">
+<span>Maritime Bulk &amp; Rail Freight</span>
+<span class="text-secondary font-medium">Scope 3 Cat 4</span>
+</div>
+</div>
+</div>
+<!-- STAGE 2: Scope Consolidation -->
+<div class="relative z-10 flex flex-col gap-space-md">
+<div class="pb-space-xs mb-space-xs">
+<span class="font-label-sm text-label-sm font-bold uppercase text-on-surface tracking-wider">2. Scope Consolidation</span>
+<p class="font-mono-data text-[11px] text-on-surface-variant">GHG Protocol Pillars</p>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container text-on-surface flex flex-col justify-between min-h-[110px] shadow-sm">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold">Scope 1 Direct</span>
+<span class="px-space-xs py-space-2xs rounded bg-surface-container-highest text-secondary font-mono-data text-[10px] font-bold uppercase">Combustion</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">Onsite thermals, furnaces &amp; mobile equipment</p>
+</div>
+<div class="flex items-baseline justify-between mt-space-sm pt-space-xs">
+<span class="font-mono-data text-[11px] text-on-surface-variant">12.8% Total Pool</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">182.4k <span class="text-body-sm text-on-surface-variant font-normal">tCO₂e</span></span>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container text-on-surface flex flex-col justify-between min-h-[110px] shadow-sm">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold">Scope 2 Market</span>
+<span class="px-space-xs py-space-2xs rounded bg-surface-container-highest text-secondary font-mono-data text-[10px] font-bold uppercase">Electricity</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">Purchased megawatt-hours across EU grid</p>
+</div>
+<div class="flex items-baseline justify-between mt-space-sm pt-space-xs">
+<span class="font-mono-data text-[11px] text-on-surface-variant">6.9% Total Pool</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">98.3k <span class="text-body-sm text-on-surface-variant font-normal">tCO₂e</span></span>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-primary-container text-on-primary flex flex-col justify-between min-h-[180px] shadow-md">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-primary">Scope 3 Upstream</span>
+<span class="px-space-xs py-space-2xs rounded bg-surface-tint/30 text-tertiary-fixed font-mono-data text-[10px] font-bold uppercase">Cat 1 - 4</span>
+</div>
+<p class="font-body-sm text-body-sm text-inverse-on-surface/80 mt-space-2xs">Precursor supply chain, mining extraction &amp; freight distribution</p>
+</div>
+<div class="flex items-baseline justify-between mt-space-md pt-space-xs">
+<span class="font-mono-data text-[11px] text-on-primary-container">80.3% Total Pool</span>
+<span class="font-display-lg text-display-lg font-bold text-on-primary">1,148.3k <span class="text-label-md text-on-primary-container font-normal">tCO₂e</span></span>
+</div>
+</div>
+</div>
+<!-- STAGE 3: Processing & Smelting Operations -->
+<div class="relative z-10 flex flex-col gap-space-sm">
+<div class="pb-space-xs mb-space-xs">
+<span class="font-label-sm text-label-sm font-bold uppercase text-on-surface tracking-wider">3. Operations &amp; Conversion</span>
+<p class="font-mono-data text-[11px] text-on-surface-variant">Facility Processing Nodes</p>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">Direct Reduction (DRI) Plant</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">factory</span>
+</div>
+<div class="flex items-center justify-between font-mono-data text-mono-data mt-space-xs text-on-surface">
+<span class="text-on-surface-variant text-[11px]">Primary Reduction</span>
+<span class="font-bold">489.2k tCO₂e</span>
+</div>
+<div class="mt-space-xs flex items-center gap-space-xs text-[10px] font-mono-data text-on-surface-variant">
+<span>Energy: 64% NG / 36% H2</span>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">Electric Arc Furnace &amp; Refining</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">mode_heat</span>
+</div>
+<div class="flex items-center justify-between font-mono-data text-mono-data mt-space-xs text-on-surface">
+<span class="text-on-surface-variant text-[11px]">Secondary Metallurgy</span>
+<span class="font-bold">428.6k tCO₂e</span>
+</div>
+<div class="mt-space-xs flex items-center gap-space-xs text-[10px] font-mono-data text-on-surface-variant">
+<span>Electrode Burn &amp; Lime Add</span>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">Rolling Mills &amp; Extrusion</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">view_stream</span>
+</div>
+<div class="flex items-center justify-between font-mono-data text-mono-data mt-space-xs text-on-surface">
+<span class="text-on-surface-variant text-[11px]">Thermal Reheating</span>
+<span class="font-bold">321.4k tCO₂e</span>
+</div>
+<div class="mt-space-xs flex items-center gap-space-xs text-[10px] font-mono-data text-on-surface-variant">
+<span>Natural Gas Soaking Pits</span>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">Surface Finishing &amp; QA</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">tune</span>
+</div>
+<div class="flex items-center justify-between font-mono-data text-mono-data mt-space-xs text-on-surface">
+<span class="text-on-surface-variant text-[11px]">Pickling, Galvanizing</span>
+<span class="font-bold">189.7k tCO₂e</span>
+</div>
+<div class="mt-space-xs flex items-center gap-space-xs text-[10px] font-mono-data text-on-surface-variant">
+<span>Zinc baths &amp; Annealing lines</span>
+</div>
+</div>
+</div>
+<!-- STAGE 4: Final Product Absorbed Output -->
+<div class="relative z-10 flex flex-col gap-space-sm">
+<div class="pb-space-xs mb-space-xs">
+<span class="font-label-sm text-label-sm font-bold uppercase text-on-surface tracking-wider">4. Product Absorption</span>
+<p class="font-mono-data text-[11px] text-on-surface-variant">Embodied Output Endpoints</p>
+</div>
+<div class="group p-space-md rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-all shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold">Automotive Flat Steel</span>
+<span class="font-mono-data text-mono-data font-bold">412.0k t</span>
+</div>
+<div class="flex items-center justify-between font-mono-data text-[11px] text-on-surface-variant mt-space-2xs">
+<span>Intensity: 1.48 tCO₂e / ton</span>
+<span class="text-on-tertiary-container font-semibold">28.8% Total</span>
+</div>
+</div>
+<div class="group p-space-md rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-all shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold">Aerospace High-Temp Alloys</span>
+<span class="font-mono-data text-mono-data font-bold">285.0k t</span>
+</div>
+<div class="flex items-center justify-between font-mono-data text-[11px] text-on-surface-variant mt-space-2xs">
+<span>Intensity: 3.82 tCO₂e / ton</span>
+<span class="text-on-tertiary-container font-semibold">19.9% Total</span>
+</div>
+</div>
+<div class="group p-space-md rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-all shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold">Structural Beams &amp; Rebar</span>
+<span class="font-mono-data text-mono-data font-bold">389.0k t</span>
+</div>
+<div class="flex items-center justify-between font-mono-data text-[11px] text-on-surface-variant mt-space-2xs">
+<span>Intensity: 0.94 tCO₂e / ton</span>
+<span class="text-on-tertiary-container font-semibold">27.2% Total</span>
+</div>
+</div>
+<div class="group p-space-md rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-all shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold">Construction Cement Clinker</span>
+<span class="font-mono-data text-mono-data font-bold">200.0k t</span>
+</div>
+<div class="flex items-center justify-between font-mono-data text-[11px] text-on-surface-variant mt-space-2xs">
+<span>Intensity: 0.81 tCO₂e / ton</span>
+<span class="text-on-tertiary-container font-semibold">14.0% Total</span>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low text-on-surface-variant shadow-sm">
+<div class="flex items-center justify-between font-label-md text-label-md font-semibold text-on-surface">
+<span>Overhead, Scrap &amp; Flare Loss</span>
+<span class="font-mono-data text-mono-data font-bold">142.9k t</span>
+</div>
+<div class="flex items-center justify-between font-mono-data text-[11px] mt-space-2xs">
+<span>Unallocated process flaring</span>
+<span>10.0% Allocation</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Auditable Double-Entry Carbon Ledger Table Header & Controls -->
+<div class="w-full rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden mb-space-2xl">
+<div class="p-space-xl flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg bg-surface-container-low/40">
+<div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">
+<span class="material-symbols-outlined text-[16px]">account_balance</span>
+<span>Immutable Double-Entry Ledger</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mt-space-2xs">
+            Financial-Grade Emission Transaction Journal
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">
+            Every transaction credits a physical emission activity source and debits the specific absorbed asset or product inventory batch.
+          </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="relative">
+<input class="bg-surface-container-lowest text-on-surface px-space-md py-space-xs pl-9 rounded-lg font-body-md text-body-md w-72 focus:outline-none focus:ring-2 focus:ring-secondary shadow-sm" id="ledgerSearch" placeholder="Filter by TX, Scope, or Facility..." type="text"/>
+<span class="material-symbols-outlined absolute left-2.5 top-2.5 text-[18px] text-on-surface-variant">search</span>
+</div>
+<button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">filter_list</span>
+<span>Filter</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">verified_user</span>
+<span>Verify Proofs</span>
+</button>
+</div>
+</div>
+<!-- High-Density Ledger Table -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md border-collapse min-w-[1100px]">
+<thead class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider select-none">
+<tr>
+<th class="py-space-md px-space-lg font-semibold">Timestamp &amp; TX ID</th>
+<th class="py-space-md px-space-lg font-semibold">Activity &amp; Facility</th>
+<th class="py-space-md px-space-lg font-semibold">Source Ledger (Debit +)</th>
+<th class="py-space-md px-space-lg font-semibold">Destination Ledger (Credit −)</th>
+<th class="py-space-md px-space-lg font-semibold">Allocation Standard</th>
+<th class="py-space-md px-space-lg font-semibold">Audit State</th>
+<th class="py-space-md px-space-lg font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-none text-on-surface" id="ledgerRows">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-lg font-mono-data text-mono-data">
+<div class="font-bold text-on-surface">TX-2024-0921-081</div>
+<div class="text-[11px] text-on-surface-variant">2024-10-24 13:42:19 UTC</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="font-semibold text-on-surface">Natural Gas Pipeline Meter #4</div>
+<div class="text-[12px] text-on-surface-variant flex items-center gap-space-2xs mt-0.5">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Rotterdam BOF Smelter • Facility NL-02</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg font-mono-data">
+<div class="text-error font-semibold">+412.50 tCO₂e</div>
+<div class="text-[11px] text-on-surface-variant">Scope 1 Stationary Combustion</div>
+</td>
+<td class="py-space-md px-space-lg font-mono-data">
+<div class="text-on-tertiary-container font-semibold">−412.50 tCO₂e</div>
+<div class="text-[11px] text-on-surface-variant">Finished Product: Hot-Rolled Coil #8812</div>
+</td>
+<td class="py-space-md px-space-lg font-mono-data text-[12px]">
+<span class="px-space-xs py-space-2xs rounded bg-surface-container-high text-on-surface">
+                  ISO 14044 §4.3.4 (Mass/Energy)
+                </span>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-xs font-mono-data text-[11px] text-on-tertiary-container font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>SHA-256 Reconciled</span>
+</div>
+<div class="font-mono-data text-[10px] text-on-surface-variant truncate max-w-[140px]" title="e4b278df9...39ac">
+                  hash: e4b278df994a39ac
+                </div>
+</td>
+<td class="py-space-md px-space-lg text-right font-label-sm text-label-sm">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-space-xs rounded hover:bg-surface-container text-secondary transition-colors" title="View Calculation Sheet" type="button">
+<span class="material-symbols-outlined text-[18px]">calculate</span>
+</button>
+<button class="p-space-xs rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Certificate of Origin" type="button">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-lg font-mono-data text-mono-data">
+<div class="font-bold text-on-surface">TX-2024-0921-082</div>
+<div class="text-[11px] text-on-surface-variant">2024-10-24 13:28:04 UTC</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="font-semibold text-on-surface">Inbound Sponge Iron (DRI) Lot #492</div>
+<div class="text-[12px] text-on-surface-variant flex items-center gap-space-2xs mt-0.5">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span>
+<span>Port of Antwerp Rail Infeed • Supplier LKAB</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg font-mono-data">
+<div class="text-error font-semibold">+1,248.80 tCO₂e</div>
+<div class="text-[11px] text-on-surface-variant">Scope 3 Cat 1 Purchased Goods</div>
+</td>
+<td class="py-space-md px-space-lg font-mono-data">
+<div class="text-on-tertiary-container font-semibold">−1,248.80 tCO₂e</div>
+<div class="text-[11px] text-on-surface-variant">In-Process WIP: EAF Melt #220</div>
+</td>
+<td class="py-space-md px-space-lg font-mono-data text-[12px]">
+<span class="px-space-xs py-space-2xs rounded bg-surface-container-high text-on-surface">
+                  Stoichiometric Chemical Balance
+                </span>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-xs font-mono-data text-[11px] text-on-tertiary-container font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>SHA-256 Reconciled</span>
+</div>
+<div class="font-mono-data text-[10px] text-on-surface-variant truncate max-w-[140px]" title="987fc110...7a01">
+                  hash: 987fc1102e3b7a01
+                </div>
+</td>
+<td class="py-space-md px-space-lg text-right font-label-sm text-label-sm">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-space-xs rounded hover:bg-surface-container text-secondary transition-colors" title="View Calculation Sheet" type="button">
+<span class="material-symbols-outlined text-[18px]">calculate</span>
+</button>
+<button class="p-space-xs rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Certificate of Origin" type="button">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-lg font-mono-data text-mono-data">
+<div class="font-bold text-on-surface">TX-2024-0921-083</div>
+<div class="text-[11px] text-on-surface-variant">2024-10-24 12:51:30 UTC</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="font-semibold text-on-surface">HV Grid Substation TenneT #09</div>
+<div class="text-[12px] text-on-surface-variant flex items-center gap-space-2xs mt-0.5">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>Rolling Mill Complex 3 • Facility NL-01</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg font-mono-data">
+<div class="text-error font-semibold">+184.15 tCO₂e</div>
+<div class="text-[11px] text-on-surface-variant">Scope 2 Market-Based Electricity</div>
+</td>
+<td class="py-space-md px-space-lg font-mono-data">
+<div class="text-on-tertiary-container font-semibold">−184.15 tCO₂e</div>
+<div class="text-[11px] text-on-surface-variant">Finished Product: Structural Rebar #B24</div>
+</td>
+<td class="py-space-md px-space-lg font-mono-data text-[12px]">
+<span class="px-space-xs py-space-2xs rounded bg-surface-container-high text-on-surface">
+                  Machine Metered Throughput
+                </span>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-xs font-mono-data text-[11px] text-on-tertiary-container font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>SHA-256 Reconciled</span>
+</div>
+<div class="font-mono-data text-[10px] text-on-surface-variant truncate max-w-[140px]" title="33a0b811...f144">
+                  hash: 33a0b8118ce0f144
+                </div>
+</td>
+<td class="py-space-md px-space-lg text-right font-label-sm text-label-sm">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-space-xs rounded hover:bg-surface-container text-secondary transition-colors" title="View Calculation Sheet" type="button">
+<span class="material-symbols-outlined text-[18px]">calculate</span>
+</button>
+<button class="p-space-xs rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Certificate of Origin" type="button">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-lg font-mono-data text-mono-data">
+<div class="font-bold text-on-surface">TX-2024-0921-084</div>
+<div class="text-[11px] text-on-surface-variant">2024-10-24 11:15:22 UTC</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="font-semibold text-on-surface">Vacuum Degassing Oxygen Flaring Stack</div>
+<div class="text-[12px] text-on-surface-variant flex items-center gap-space-2xs mt-0.5">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+<span>Specialty Refining Shop • Facility BE-04</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg font-mono-data">
+<div class="text-error font-semibold">+82.40 tCO₂e</div>
+<div class="text-[11px] text-on-surface-variant">Scope 1 Flaring &amp; Fugitive Gas</div>
+</td>
+<td class="py-space-md px-space-lg font-mono-data">
+<div class="text-on-surface-variant font-semibold">−82.40 tCO₂e</div>
+<div class="text-[11px] text-on-surface-variant">Facility Overhead &amp; Process Loss</div>
+</td>
+<td class="py-space-md px-space-lg font-mono-data text-[12px]">
+<span class="px-space-xs py-space-2xs rounded bg-surface-container-high text-on-surface">
+                  Direct Flue Sensor Integration
+                </span>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-xs font-mono-data text-[11px] text-on-tertiary-container font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>SHA-256 Reconciled</span>
+</div>
+<div class="font-mono-data text-[10px] text-on-surface-variant truncate max-w-[140px]" title="ff2048aa...09c4">
+                  hash: ff2048aa12d09c4
+                </div>
+</td>
+<td class="py-space-md px-space-lg text-right font-label-sm text-label-sm">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-space-xs rounded hover:bg-surface-container text-secondary transition-colors" title="View Calculation Sheet" type="button">
+<span class="material-symbols-outlined text-[18px]">calculate</span>
+</button>
+<button class="p-space-xs rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Certificate of Origin" type="button">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-lg font-mono-data text-mono-data">
+<div class="font-bold text-on-surface">TX-2024-0921-085</div>
+<div class="text-[11px] text-on-surface-variant">2024-10-24 10:04:47 UTC</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="font-semibold text-on-surface">Inter-Plant Bulk Rail Shipment #902</div>
+<div class="text-[12px] text-on-surface-variant flex items-center gap-space-2xs mt-0.5">
+<span class="material-symbols-outlined text-[14px]">directions_subway</span>
+<span>Duisburg Hub to Gent Finishing Plant</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg font-mono-data">
+<div class="text-error font-semibold">+96.20 tCO₂e</div>
+<div class="text-[11px] text-on-surface-variant">Scope 3 Cat 4 Inbound Logistics</div>
+</td>
+<td class="py-space-md px-space-lg font-mono-data">
+<div class="text-on-tertiary-container font-semibold">−96.20 tCO₂e</div>
+<div class="text-[11px] text-on-surface-variant">Finished Product: Aerospace Alloy #TI-71</div>
+</td>
+<td class="py-space-md px-space-lg font-mono-data text-[12px]">
+<span class="px-space-xs py-space-2xs rounded bg-surface-container-high text-on-surface">
+                  GLEC Logistics Factor (Ton-Km)
+                </span>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-xs font-mono-data text-[11px] text-on-tertiary-container font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>SHA-256 Reconciled</span>
+</div>
+<div class="font-mono-data text-[10px] text-on-surface-variant truncate max-w-[140px]" title="01ba9942...88fe">
+                  hash: 01ba99426f88fec2
+                </div>
+</td>
+<td class="py-space-md px-space-lg text-right font-label-sm text-label-sm">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-space-xs rounded hover:bg-surface-container text-secondary transition-colors" title="View Calculation Sheet" type="button">
+<span class="material-symbols-outlined text-[18px]">calculate</span>
+</button>
+<button class="p-space-xs rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Certificate of Origin" type="button">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Ledger Summary Footnote -->
+<div class="p-space-lg bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-md font-mono-data text-[11px] text-on-surface-variant">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span>
+<span>Ledger Checksum State: <strong>Valid &amp; Synchronized</strong> across 5,840 journal entries</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span>Net Cumulative Scope Inflow: <strong>+1,428,950.00 t</strong></span>
+<span>•</span>
+<span>Net Product/Waste Outflow: <strong>−1,428,950.00 t</strong></span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Interactive micro-interaction for Rebalance Allocation Run
+  const rebalanceBtn = document.getElementById('rebalanceBtn');
+  if (rebalanceBtn) {
+    rebalanceBtn.addEventListener('click', () => {
+      const icon = rebalanceBtn.querySelector('.material-symbols-outlined');
+      if (icon) {
+        icon.classList.add('animate-spin');
+        setTimeout(() => {
+          icon.classList.remove('animate-spin');
+        }, 1200);
+      }
+    });
+  }
+
+  // High-performance tabular filter
+  const searchInput = document.getElementById('ledgerSearch');
+  const tableRows = document.querySelectorAll('#ledgerRows tr');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase();
+      tableRows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        row.style.display = text.includes(query) ? '' : 'none';
+      });
+    });
+  }
+</script></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 py-space-sm px-space-xl"><div class="w-full flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><div class="flex items-center gap-space-lg"><span class="flex items-center gap-space-xs text-on-surface"><span class="material-symbols-outlined text-[16px] text-on-tertiary-container">verified_user</span><span>ISO 14064-1/2:2018 Certified Accounting</span></span><span class="text-outline-variant">•</span><span class="flex items-center gap-space-xs"><span>GHG Protocol Corporate Standard Scope 1-3 Compliant</span></span><span class="text-outline-variant">•</span><span class="font-mono-data text-mono-data text-[11px]">Regulatory Telemetry Sync: Oct 24, 2024 — 14:02:18 UTC</span></div><div class="flex items-center gap-space-md"><span class="font-mono-data text-mono-data text-[11px] bg-surface-container-low px-space-xs py-[2px] rounded border border-outline-variant/30">Ledger Node: EU-WEST-1 (Immutable SHA-256)</span><span class="text-on-surface-variant">© 2024 EcoAudit AI Systems</span></div></div></footer></div></body></html>

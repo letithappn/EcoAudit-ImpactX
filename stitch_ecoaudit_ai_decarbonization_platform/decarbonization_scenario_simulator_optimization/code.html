@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary-fixed":"#d6e3fe","surface-container-highest":"#d3e4fe","inverse-primary":"#bac7e1","error-container":"#ffdad6","secondary-container":"#4069f2","surface-dim":"#cbdbf5","inverse-on-surface":"#eaf1ff","on-error":"#ffffff","tertiary-container":"#002114","on-tertiary":"#ffffff","surface-container-high":"#dce9ff","on-error-container":"#93000a","primary-container":"#0e1c2f","on-background":"#0b1c30","outline":"#75777d","surface-tint":"#525f75","tertiary-fixed":"#85f8c4","tertiary":"#000000","secondary-fixed":"#dce1ff","secondary-fixed-dim":"#b7c4ff","error":"#ba1a1a","background":"#f8f9ff","on-secondary-fixed-variant":"#0039b5","surface-container-low":"#eff4ff","outline-variant":"#c5c6cd","primary-fixed-dim":"#bac7e1","primary":"#000000","tertiary-fixed-dim":"#68dba9","on-tertiary-fixed":"#002114","on-secondary-container":"#fffbff","surface-variant":"#d3e4fe","surface-bright":"#f8f9ff","on-tertiary-fixed-variant":"#005137","surface":"#f8f9ff","secondary":"#1d4ed8","surface-container":"#e5eeff","on-surface":"#0b1c30","on-primary-fixed":"#0e1c2f","on-surface-variant":"#44474c","surface-container-lowest":"#ffffff","on-secondary-fixed":"#001551","on-tertiary-container":"#069669","on-primary":"#ffffff","on-primary-container":"#77849c","inverse-surface":"#213145","on-secondary":"#ffffff","on-primary-fixed-variant":"#3a475c"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-screen":"1.5rem","space-xs":"0.25rem","space-3xl":"2.5rem","space-4xl":"3rem","space-2xl":"2rem","space-sm":"0.5rem","space-base":"1rem","space-xl":"1.5rem","gutter-default":"1.25rem","space-2xs":"0.125rem","space-md":"0.75rem","gutter-compact":"0.75rem","space-lg":"1.25rem"},"fontFamily":{"mono-data":["Inter"],"display-lg":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-xl":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"metric-xl":["Plus Jakarta Sans"],"body-lg":["Inter"],"label-md":["Inter"],"label-sm":["Inter"],"headline-lg":["Plus Jakarta Sans"],"metric-md":["Plus Jakarta Sans"],"body-sm":["Inter"]},"fontSize":{"mono-data":["12px",{"lineHeight":"16px","letterSpacing":"0","fontWeight":"500"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"700"}],"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-xl":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"metric-xl":["32px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["15px",{"lineHeight":"22px","fontWeight":"400"}],"label-md":["13px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"headline-lg":["22px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"metric-md":["20px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-primary-container text-on-primary border-r border-outline-variant/20 z-50 flex flex-col justify-between select-none shadow-[0_1px_8px_rgba(0,0,0,0.08)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center justify-between border-b border-outline-variant/15"><div class="flex items-center gap-space-sm"><img alt="EcoAudit AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WJ2lyfx9NDK8-KOiwWOrJ5XpLFHpGbKeKluoUjkBcRcFlQv3ST-F2PzR59-XLEXdUdLLsKTFCHIcmJdGVF3ece-n9hsLrEVXFXNfVQVkgvbPkiVdI08XwgeqW8BzTcbE-Lxy-UEWapruiLswwaITtvV_yS-GMCwEClz6buJ4eUXMEHvepzP60hallrgBG3EH1-f-jBMQt0QZXb_5x4Z_ftsoX3XOQoYS5XXYkIJXQIXZfE9dlB0pEy1w"/><span class="font-headline-md text-headline-md font-bold tracking-tight text-on-primary">EcoAudit<span class="text-secondary-fixed">AI</span></span></div><span class="px-space-xs py-space-2xs bg-surface-tint/20 text-secondary-fixed font-mono-data text-[10px] rounded uppercase font-semibold tracking-wider">v3.4 Audited</span></div><div class="px-space-lg pt-space-lg pb-space-xs"><div class="font-label-sm text-label-sm uppercase tracking-widest text-on-primary-container font-semibold">Emission Intelligence</div></div><nav class="flex flex-col gap-space-2xs px-space-md" data-active-classes="bg-secondary text-on-secondary font-semibold shadow-[0_1px_4px_rgba(0,0,0,0.2)]"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-container-high/15 hover:text-inverse-on-surface transition-all group" data-path="executive-overview" href="#"><span class="material-symbols-outlined text-[20px] text-inverse-on-surface/70 group-hover:text-inverse-on-surface">dashboard</span><span class="font-label-md text-label-md">Executive Overview</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-container-high/15 hover:text-inverse-on-surface transition-all group" data-path="cbam-and-product-footprints" href="#"><span class="material-symbols-outlined text-[20px] text-inverse-on-surface/70 group-hover:text-inverse-on-surface">verified</span><span class="font-label-md text-label-md">CBAM &amp; Product Footprints</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-container-high/15 hover:text-inverse-on-surface transition-all group" data-path="multi-year-esg-targets" href="#"><span class="material-symbols-outlined text-[20px] text-inverse-on-surface/70 group-hover:text-inverse-on-surface">trending_down</span><span class="font-label-md text-label-md">Multi-Year ESG Targets</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-container-high/15 hover:text-inverse-on-surface transition-all group" data-path="scope-3-and-suppliers" href="#"><span class="material-symbols-outlined text-[20px] text-inverse-on-surface/70 group-hover:text-inverse-on-surface">local_shipping</span><span class="font-label-md text-label-md">Scope 3 &amp; Suppliers</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-container-high/15 hover:text-inverse-on-surface transition-all group" data-path="carbon-balance-ledger" href="#"><span class="material-symbols-outlined text-[20px] text-inverse-on-surface/70 group-hover:text-inverse-on-surface">account_balance</span><span class="font-label-md text-label-md">Carbon Balance Ledger</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg transition-all group bg-secondary text-on-secondary font-semibold shadow-[0_1px_4px_rgba(0,0,0,0.2)]" data-path="decarbonization-simulator" href="#"><span class="material-symbols-outlined text-[20px] text-inverse-on-surface/70 group-hover:text-inverse-on-surface">tune</span><span class="font-label-md text-label-md">Decarbonization Simulator</span></a></nav></div><div class="p-space-md border-t border-outline-variant/15 bg-primary-container/90"><div class="p-space-sm bg-surface-container-low/10 rounded-lg border border-outline-variant/20 flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-tertiary-fixed font-semibold flex items-center gap-space-2xs"><span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-pulse"></span>Engine Active</span><span class="font-mono-data text-mono-data text-on-primary-container text-[11px]">GHG Protocol</span></div><p class="font-body-sm text-body-sm text-inverse-on-surface/70 text-[11px] leading-tight">Double-entry Scope 1, 2 &amp; 3 Ledger aligned with CBAM Regulation (EU) 2023/956.</p></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-md z-40 flex items-center justify-between px-space-xl border-b border-outline-variant/30 shadow-[0_1px_3px_rgba(11,28,48,0.04)]"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded-lg border border-outline-variant/40"><span class="material-symbols-outlined text-[18px] text-secondary">domain</span><span class="font-label-md text-label-md text-on-surface font-semibold">Global Operations (All 14 Facilities)</span><span class="text-outline-variant">|</span><span class="font-mono-data text-mono-data text-on-surface-variant font-medium">FY2024 / Q3 CBAM Cycle</span><span class="material-symbols-outlined text-[18px] text-on-surface-variant cursor-pointer">arrow_drop_down</span></div><div class="flex items-center gap-space-xs bg-tertiary-container/10 text-on-tertiary-container px-space-md py-space-xs rounded-full border border-tertiary-fixed/30 font-label-sm text-label-sm font-semibold"><span class="material-symbols-outlined text-[16px] text-on-tertiary-container">task_alt</span><span>CBAM Readiness: 94.2% Audit Ready</span></div></div><div class="flex items-center gap-space-lg"><button class="flex items-center gap-space-xs bg-surface-container-low hover:bg-surface-container text-on-surface px-space-sm py-space-xs rounded-lg border border-outline-variant/40 text-label-sm font-label-sm font-medium" type="button"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">search</span><span class="text-on-surface-variant">Quick Search</span><kbd class="px-space-2xs py-[1px] bg-surface-container-high rounded text-[10px] font-mono-data text-on-surface-variant">⌘K</kbd></button><button class="flex items-center gap-space-xs bg-secondary hover:bg-secondary/90 text-on-secondary px-space-md py-space-xs rounded-lg font-label-md text-label-md font-semibold transition-colors shadow-[0_1px_3px_rgba(29,78,216,0.3)]" type="button"><span class="material-symbols-outlined text-[18px]">add_circle</span><span>+ New Ingestion / Audit Run</span></button><div class="relative flex items-center cursor-pointer"><span class="material-symbols-outlined text-[22px] text-on-surface-variant hover:text-on-surface transition-colors">notifications</span><span class="absolute -top-1 -right-1 w-4 h-4 bg-error text-on-error rounded-full text-[10px] font-bold flex items-center justify-center font-mono-data">3</span></div><div class="h-8 w-px bg-outline-variant/30"></div><div class="flex items-center gap-space-sm"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-semibold">Dr. Aris Thorne</span><span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Chief Sustainability Officer</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE4xB_bO5qA8LkO-gSQ-h6j0nSs1bpNltBCLPmlim_7V0XiLRoAx3gZkiuWNTcc-eg-Ed_2-fNMfrAvnCqPb6r2fC9SnPEeu0CeK8-kWN_ga7OLNK56EOWMOJlroZzk1dB5czjOUasMRydMUCWN0pDefKbLqMHgVYqc0xsTc4NqGhX-xh_RS9vPNQf6m6TtapAq9tIuD3CZ_CwOs5fdEjr7l78fQS4L32XUj1wBi5NDEOOYMJkp5iq"/></div></div></header><main class="w-full pt-16 flex-1 bg-surface"><div class="flex flex-col w-full">
+<div class="px-space-xl py-space-lg flex flex-col gap-space-xl">
+<!-- Top Action & Meta Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-xl rounded-xl shadow-sm">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-[2px] bg-secondary-fixed text-on-secondary-fixed-variant rounded font-mono-data text-mono-data text-[11px] font-bold tracking-wider uppercase">Strategic Sandbox v4.1</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-mono-data text-mono-data text-on-surface-variant text-[11px]">Engine: Monte Carlo Stochastic v2.8 (5,000 runs)</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-bold">Decarbonization Scenario Simulator &amp; Strategic Sandbox</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">Model capital projects, fuel switching, circular scrap rates, and green power PPAs against dynamic regulatory carbon pricing and internal hurdle rates.</p>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-center shrink-0">
+<button class="flex items-center gap-space-xs bg-surface-container-high hover:bg-surface-container-highest text-on-surface px-space-md py-space-sm rounded-lg font-label-md text-label-md transition-all" id="btn-monte-carlo" type="button">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+<span>Run Monte Carlo Risk</span>
+</button>
+<button class="flex items-center gap-space-xs bg-secondary hover:bg-secondary/90 text-on-secondary px-space-md py-space-sm rounded-lg font-label-md text-label-md font-semibold transition-all shadow-sm" id="btn-save-blueprint" type="button">
+<span class="material-symbols-outlined text-[18px]">bookmark_add</span>
+<span>Save Scenario as Blueprint</span>
+</button>
+</div>
+</div>
+<!-- Active Facilities Status Ticker -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">factory</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Scope 1 Baseline</span>
+<span class="font-mono-data text-mono-data text-on-surface font-semibold">824,000 tCO₂e/yr</span>
+</div>
+</div>
+<span class="font-mono-data text-mono-data text-on-surface-variant text-[11px]">Primary Blast</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Scope 2 Market</span>
+<span class="font-mono-data text-mono-data text-on-surface font-semibold">284,500 tCO₂e/yr</span>
+</div>
+</div>
+<span class="font-mono-data text-mono-data text-on-surface-variant text-[11px]">EU Grid Mix</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">ETS Exposure (Status Quo)</span>
+<span class="font-mono-data text-mono-data text-error font-semibold">€94.2M / yr</span>
+</div>
+</div>
+<span class="font-mono-data text-mono-data text-error text-[11px]">Unhedged</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined text-[20px]">balance</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Simulation Target</span>
+<span class="font-mono-data text-mono-data text-on-surface font-semibold">Net-Zero 2035 Path</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-tertiary-container/15 text-on-tertiary-container px-space-xs py-[2px] rounded font-semibold">SBTi 1.5°C</span>
+</div>
+</div>
+<!-- Main Workspace: Asymmetric Sandbox Studio -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Column: Sandbox Intervention Studio (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg bg-surface-container-lowest p-space-xl rounded-xl shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[22px] text-secondary">tune</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Intervention Control Studio</h2>
+</div>
+<button class="font-label-sm text-label-sm text-secondary hover:underline cursor-pointer" id="reset-controls" type="button">Reset Defaults</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant -mt-space-sm">Adjust capital allocations and regulatory parameters to stress-test financial resilience and physical decarbonization velocity.</p>
+<!-- Control 1: Electrification & Fuel Switching -->
+<div class="flex flex-col gap-space-xs bg-surface-container-low/60 p-space-md rounded-lg transition-all hover:bg-surface-container-low">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-space-xs" for="slider-fuel">
+<span class="material-symbols-outlined text-[18px] text-secondary">local_fire_department</span>
+<span>Electrification &amp; Fuel Switching</span>
+</label>
+<span class="font-mono-data text-mono-data text-on-surface font-bold px-space-xs py-[2px] bg-surface-container rounded" id="label-fuel">45% H₂ Co-Fire</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Switch natural gas reheat furnaces to industrial heat pumps and green hydrogen burners.</p>
+<input class="w-full accent-secondary cursor-pointer h-2 bg-surface-container-highest rounded-lg" id="slider-fuel" max="100" min="0" type="range" value="45"/>
+<div class="flex justify-between font-mono-data text-mono-data text-[11px] text-on-surface-variant">
+<span>0% (Gas Fired)</span>
+<span>Current: 15%</span>
+<span>100% (Pure H₂ / Direct Arc)</span>
+</div>
+</div>
+<!-- Control 2: Renewable Energy Procurement -->
+<div class="flex flex-col gap-space-xs bg-surface-container-low/60 p-space-md rounded-lg transition-all hover:bg-surface-container-low">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-space-xs" for="slider-ppa">
+<span class="material-symbols-outlined text-[18px] text-secondary">solar_power</span>
+<span>Renewable Energy Procurement (PPA)</span>
+</label>
+<span class="font-mono-data text-mono-data text-on-surface font-bold px-space-xs py-[2px] bg-surface-container rounded" id="label-ppa">92% Coverage</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Off-site solar &amp; offshore wind Virtual Power Purchase Agreement coverage for Scope 2.</p>
+<input class="w-full accent-secondary cursor-pointer h-2 bg-surface-container-highest rounded-lg" id="slider-ppa" max="100" min="20" type="range" value="92"/>
+<div class="flex justify-between font-mono-data text-mono-data text-[11px] text-on-surface-variant">
+<span>20% (Baseline 64%)</span>
+<span>Target: 85%</span>
+<span>100% 24/7 CFE</span>
+</div>
+</div>
+<!-- Control 3: Scrap Metal Recycled Content -->
+<div class="flex flex-col gap-space-xs bg-surface-container-low/60 p-space-md rounded-lg transition-all hover:bg-surface-container-low">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-space-xs" for="slider-scrap">
+<span class="material-symbols-outlined text-[18px] text-secondary">recycling</span>
+<span>Scrap Recycled Content / Circular Yield</span>
+</label>
+<span class="font-mono-data text-mono-data text-on-surface font-bold px-space-xs py-[2px] bg-surface-container rounded" id="label-scrap">40% Scrap Feed</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Increase secondary circular ferrous &amp; aluminum feed into electric arc &amp; blast crucibles.</p>
+<input class="w-full accent-secondary cursor-pointer h-2 bg-surface-container-highest rounded-lg" id="slider-scrap" max="80" min="10" type="range" value="40"/>
+<div class="flex justify-between font-mono-data text-mono-data text-[11px] text-on-surface-variant">
+<span>10% (Baseline 18%)</span>
+<span>Optimal: 40%</span>
+<span>80% Circular Max</span>
+</div>
+</div>
+<!-- Control 4: Supplier Mandate Toggle -->
+<div class="flex items-center justify-between bg-surface-container-low/60 p-space-md rounded-lg">
+<div class="flex flex-col max-w-[80%]">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">shield</span>
+<span>Upstream Supplier Low-Carbon Mandate</span>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Enforce strict maximum threshold of 0.80 tCO₂e/t on all Tier-1 primary metals.</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="toggle-mandate" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<!-- Control 5: Simulated Carbon Price Benchmark -->
+<div class="flex flex-col gap-space-xs bg-surface-container-low/60 p-space-md rounded-lg transition-all hover:bg-surface-container-low">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-space-xs" for="slider-ets">
+<span class="material-symbols-outlined text-[18px] text-error">price_change</span>
+<span>Simulated Carbon Price Benchmark (EU ETS / CBAM)</span>
+</label>
+<span class="font-mono-data text-mono-data text-error font-bold px-space-xs py-[2px] bg-error-container/30 rounded" id="label-ets">€120 / tCO₂e</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Stressed carbon credit &amp; certificate valuation applied to direct emissions &amp; imported feeds.</p>
+<input class="w-full accent-secondary cursor-pointer h-2 bg-surface-container-highest rounded-lg" id="slider-ets" max="220" min="60" step="5" type="range" value="120"/>
+<div class="flex justify-between font-mono-data text-mono-data text-[11px] text-on-surface-variant">
+<span>€60 (Bear)</span>
+<span>Current: €85</span>
+<span>€220 (2030 EU ETS Stress)</span>
+</div>
+</div>
+<!-- Facility Sub-Asset Preview -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Primary Target Facilities</span>
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="relative rounded-lg overflow-hidden h-24 bg-cover bg-center shadow-inner" data-alt="Modern clean industrial steel manufacturing facility with glowing energy efficient induction furnaces and overhead automated cranes in slate blue architectural lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA4fznPl_Uci3F0BI3td16CiDe1mtrkWAj_UAnlYghgmsvwE6PKYYCBbIpLREQNOfZl-B-BSdar0N4ndcav_nwCGalw2KEAuM-0PwtrTbN2ZBUNYtVtnZ11oX0pXrwQVZqIMhgWx3ojLFUq20Se2iGU8sEizE1CooHjm9J1WI2hWAAvGTDojnom6C1mHGRTPv4pl8pRopysoYSP5KA2TLyfHXQGSLhWzb2JW2PPZ8rS5mVtzZeUh45L')">
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/90 via-primary-container/40 to-transparent p-space-xs flex flex-col justify-end">
+<span class="font-label-sm text-label-sm text-inverse-on-surface font-semibold leading-tight">Rotterdam Smelter #4</span>
+<span class="font-mono-data text-[10px] text-secondary-fixed">H₂ Injection Ready</span>
+</div>
+</div>
+<div class="relative rounded-lg overflow-hidden h-24 bg-cover bg-center shadow-inner" data-alt="High tech solar array and modern electric substation adjacent to an enterprise manufacturing plant bathed in clean daylight." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9KPUniuKJpVsBa3AmnH1tYsJnAFacY8vBf0-CjKrhUu8cNbY--mUpPczCLFSxBoPcMAAqL878rMm0blTQiRAT0rHcQLosAf8JGkMh0Wuu2I11GSRUYz8XXFuGKWYklHt2-XywrXY26B3wHo1t0ySm87ivOhToic8iyurxGJGJQxBt0rDzzoKXEUIIMvrvDfRNPeE2R5is3F4gKr_FD12xTeZAWCTYyCv-Jn3l4OzB8Hf9uTlkNn4X')">
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/90 via-primary-container/40 to-transparent p-space-xs flex flex-col justify-end">
+<span class="font-label-sm text-label-sm text-inverse-on-surface font-semibold leading-tight">Bavaria Fabrication Hub</span>
+<span class="font-mono-data text-[10px] text-secondary-fixed">95MW PPA Interconnect</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Main Panel: Dual Environmental & Financial ROI Dashboard (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Top Dual-Track KPI Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- KPI 1: Gross Abatement -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Gross Carbon Abatement</span>
+<span class="p-space-2xs bg-tertiary-container/15 text-on-tertiary-container rounded">
+<span class="material-symbols-outlined text-[18px]">energy_savings_leaf</span>
+</span>
+</div>
+<div class="flex flex-col">
+<span class="font-metric-xl text-metric-xl text-on-tertiary-container font-bold tracking-tight" id="kpi-abatement">-342,800</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">tCO₂e / yr abated</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<span class="font-mono-data text-[11px] text-on-tertiary-container font-semibold">-24.0% vs. Baseline</span>
+<span class="font-mono-data text-[11px] text-on-surface-variant">Target: -20%</span>
+</div>
+</div>
+<!-- KPI 2: CBAM Penalty Avoidance -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">CBAM Penalty Avoidance</span>
+<span class="p-space-2xs bg-secondary-fixed text-on-secondary-fixed-variant rounded">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</span>
+</div>
+<div class="flex flex-col">
+<span class="font-metric-xl text-metric-xl text-secondary font-bold tracking-tight" id="kpi-cbam">€29.1M</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Annual Border Tariffs Saved</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<span class="font-mono-data text-[11px] text-secondary font-semibold">€120/t Indexed</span>
+<span class="font-mono-data text-[11px] text-on-surface-variant">100% Exported Feeds</span>
+</div>
+</div>
+<!-- KPI 3: Payback & IRR -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Financial Payback &amp; IRR</span>
+<span class="p-space-2xs bg-surface-container-high text-on-surface rounded">
+<span class="material-symbols-outlined text-[18px]">trending_up</span>
+</span>
+</div>
+<div class="flex flex-col">
+<span class="font-metric-xl text-metric-xl text-on-surface font-bold tracking-tight" id="kpi-payback">3.4 Yrs</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">IRR: <span class="font-semibold text-secondary" id="kpi-irr">28.6%</span></span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<span class="font-mono-data text-[11px] text-on-surface font-semibold">CapEx: €48.5M</span>
+<span class="font-mono-data text-[11px] text-on-tertiary-container">OpEx: +€14.2M/yr</span>
+</div>
+</div>
+</div>
+<!-- Visual Projection 1: Carbon Abatement Waterfall -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Scenario Abatement Breakdown (Waterfall Decomposition)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Origins of the simulated 342,800 tCO₂e/yr emissions reduction across interventions</p>
+</div>
+<span class="font-mono-data text-mono-data text-on-tertiary-container bg-tertiary-container/10 px-space-sm py-space-2xs rounded-full font-semibold">Audit Grade: High Confidence</span>
+</div>
+<!-- Custom SVG Waterfall Visual -->
+<div class="w-full bg-surface-container-low/40 rounded-lg p-space-md">
+<div class="h-44 w-full flex items-end justify-between gap-space-md pt-space-md">
+<!-- Column 1: Baseline -->
+<div class="flex flex-col items-center flex-1 h-full justify-end">
+<span class="font-mono-data text-[11px] font-bold text-on-surface mb-1">1,428k</span>
+<div class="w-full bg-surface-tint rounded-t h-[92%] transition-all"></div>
+<span class="font-label-sm text-[11px] text-on-surface-variant mt-2 text-center truncate w-full">Base Footprint</span>
+</div>
+<!-- Column 2: Renewable PPA -->
+<div class="flex flex-col items-center flex-1 h-full justify-end">
+<span class="font-mono-data text-[11px] font-bold text-on-tertiary-container mb-1" id="wf-ppa-val">-110k</span>
+<div class="w-full bg-secondary rounded-t h-[28%] transition-all" id="wf-ppa-bar"></div>
+<span class="font-label-sm text-[11px] text-on-surface-variant mt-2 text-center truncate w-full">Clean PPA</span>
+</div>
+<!-- Column 3: H2 Switching -->
+<div class="flex flex-col items-center flex-1 h-full justify-end">
+<span class="font-mono-data text-[11px] font-bold text-on-tertiary-container mb-1" id="wf-fuel-val">-125k</span>
+<div class="w-full bg-secondary-container rounded-t h-[33%] transition-all" id="wf-fuel-bar"></div>
+<span class="font-label-sm text-[11px] text-on-surface-variant mt-2 text-center truncate w-full">H₂ Switch</span>
+</div>
+<!-- Column 4: Scrap Circularity -->
+<div class="flex flex-col items-center flex-1 h-full justify-end">
+<span class="font-mono-data text-[11px] font-bold text-on-tertiary-container mb-1" id="wf-scrap-val">-72k</span>
+<div class="w-full bg-surface-dim rounded-t h-[20%] transition-all" id="wf-scrap-bar"></div>
+<span class="font-label-sm text-[11px] text-on-surface-variant mt-2 text-center truncate w-full">Scrap Feed</span>
+</div>
+<!-- Column 5: Supplier Mandate -->
+<div class="flex flex-col items-center flex-1 h-full justify-end">
+<span class="font-mono-data text-[11px] font-bold text-on-tertiary-container mb-1" id="wf-mandate-val">-35.8k</span>
+<div class="w-full bg-primary-fixed-dim rounded-t h-[12%] transition-all" id="wf-mandate-bar"></div>
+<span class="font-label-sm text-[11px] text-on-surface-variant mt-2 text-center truncate w-full">Tier-1 Scope 3</span>
+</div>
+<!-- Column 6: Simulated Scenario Net -->
+<div class="flex flex-col items-center flex-1 h-full justify-end">
+<span class="font-mono-data text-[11px] font-bold text-on-tertiary-container mb-1" id="wf-net-val">1,085k</span>
+<div class="w-full bg-tertiary-container rounded-t h-[69%] transition-all" id="wf-net-bar"></div>
+<span class="font-label-sm text-[11px] text-on-surface font-semibold mt-2 text-center truncate w-full">Scenario Net</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual Projection 2: 10-Year Cumulative Financial ROI & Breakeven Curve -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">10-Year Cumulative Cashflow &amp; Breakeven Dynamic</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cumulative net position factoring avoided ETS/CBAM tariffs minus CapEx amortizations</p>
+</div>
+<div class="flex items-center gap-space-md font-mono-data text-[11px]">
+<div class="flex items-center gap-space-2xs">
+<span class="w-3 h-3 rounded bg-error"></span>
+<span class="text-on-surface-variant">ETS Status Quo (Liability)</span>
+</div>
+<div class="flex items-center gap-space-2xs">
+<span class="w-3 h-3 rounded bg-secondary"></span>
+<span class="text-on-surface font-semibold">Active Decarb Blueprint</span>
+</div>
+</div>
+</div>
+<!-- Curve Graphic Representation (SVG inline) -->
+<div class="relative w-full h-48 bg-surface-container-low/40 rounded-lg p-space-md overflow-hidden">
+<svg class="w-full h-full" fill="none" preserveaspectratio="none" viewbox="0 0 700 160">
+<!-- Grid lines -->
+<line class="text-surface-container-highest" stroke="currentColor" stroke-dasharray="4 4" x1="0" x2="700" y1="40" y2="40"></line>
+<line class="text-outline-variant" stroke="currentColor" stroke-width="1.5" x1="0" x2="700" y1="80" y2="80"></line>
+<line class="text-surface-container-highest" stroke="currentColor" stroke-dasharray="4 4" x1="0" x2="700" y1="120" y2="120"></line>
+<!-- Status Quo Path (Red downward liability line) -->
+<path class="text-error" d="M 10 80 Q 200 95, 350 115 T 690 152" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Active Scenario Path (CapEx dip -> Breakeven at Year 3.4 -> Positive ROI) -->
+<path class="text-secondary" d="M 10 80 C 100 135, 170 125, 260 80 C 350 35, 520 18, 690 12" fill="none" id="scenario-curve" stroke="currentColor" stroke-linecap="round" stroke-width="3.5"></path>
+<!-- Fill area under positive path -->
+<path class="text-secondary/10" d="M 10 80 C 100 135, 170 125, 260 80 C 350 35, 520 18, 690 12 L 690 80 L 260 80 Z" fill="currentColor" id="scenario-area"></path>
+<!-- Breakeven point marker -->
+<circle class="fill-surface-container-lowest stroke-secondary" cx="260" cy="80" r="5" stroke-width="3"></circle>
+</svg>
+<!-- Annotation overlay -->
+<div class="absolute top-2 left-60 bg-surface-container-lowest px-space-xs py-[2px] rounded shadow-sm flex items-center gap-space-2xs border-0">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-mono-data text-[10px] font-bold text-on-surface">Breakeven: Mo 41 (€48.5M Recovered)</span>
+</div>
+<div class="absolute bottom-2 right-6 bg-surface-container-lowest px-space-xs py-[2px] rounded shadow-sm">
+<span class="font-mono-data text-[11px] font-bold text-on-tertiary-container">+€68.4M 10-Yr Net NPV</span>
+</div>
+<!-- Horizontal axis labels -->
+<div class="absolute bottom-1 inset-x-4 flex justify-between font-mono-data text-[10px] text-on-surface-variant">
+<span>Yr 0 (CapEx)</span>
+<span>Yr 2</span>
+<span>Yr 4 (Net +)</span>
+<span>Yr 6</span>
+<span>Yr 8</span>
+<span>Yr 10 (Full Terminal ROI)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Section: AI Recommendations & Marginal Abatement Cost Optimization (MACC) -->
+<div class="flex flex-col gap-space-md bg-surface-container-lowest p-space-xl rounded-xl shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-secondary">psychology</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Marginal Abatement Cost Curve (MACC) Verification Engine</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">AI-prioritized capital projects ranked by operational cost per ton of CO₂e mitigated against stressed €120/t carbon allowance.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-mono-data text-mono-data text-on-surface-variant text-[11px]">Ranked by ROI Efficiency</span>
+<button class="flex items-center gap-space-xs bg-surface-container-high hover:bg-surface-container-highest text-on-surface px-space-sm py-space-xs rounded-lg font-label-sm text-label-sm" id="btn-export-memo" type="button">
+<span class="material-symbols-outlined text-[16px]">description</span>
+<span>Export Investment Memorandum</span>
+</button>
+</div>
+</div>
+<!-- Actionable Initiatives Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Action Card 1 -->
+<div class="bg-surface-container-low/40 p-space-lg rounded-xl flex flex-col justify-between transition-all hover:shadow-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-[2px] bg-tertiary-container/15 text-on-tertiary-container font-mono-data text-mono-data text-[11px] font-bold rounded">Negative Cost: -$18/tCO₂e</span>
+<span class="font-mono-data text-[11px] text-on-surface-variant">Rank #1</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold mt-space-xs">Solar/Wind PPA Contract Extension</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Immediately locks in a 10-year levelized electricity cost of €46/MWh vs. anticipated wholesale €74/MWh peak. Net cashflow accretive from day one.</p>
+<div class="grid grid-cols-2 gap-space-xs my-space-xs bg-surface-container-lowest p-space-sm rounded-lg">
+<div>
+<span class="font-label-sm text-[10px] text-on-surface-variant block uppercase">Abatement Vol</span>
+<span class="font-mono-data text-mono-data font-bold text-on-surface">110,000 t/yr</span>
+</div>
+<div>
+<span class="font-label-sm text-[10px] text-on-surface-variant block uppercase">Payback</span>
+<span class="font-mono-data text-mono-data font-bold text-on-tertiary-container">Immediate (0 M)</span>
+</div>
+</div>
+</div>
+<button class="btn-apply-rec mt-space-sm w-full py-space-xs px-space-md bg-secondary text-on-secondary rounded-lg font-label-sm text-label-sm font-semibold hover:bg-secondary/90 transition-all flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Applied to Active Scenario</span>
+</button>
+</div>
+<!-- Action Card 2 -->
+<div class="bg-surface-container-low/40 p-space-lg rounded-xl flex flex-col justify-between transition-all hover:shadow-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-[2px] bg-secondary-fixed text-on-secondary-fixed-variant font-mono-data text-mono-data text-[11px] font-bold rounded">Cost: +$12/tCO₂e</span>
+<span class="font-mono-data text-[11px] text-on-surface-variant">Rank #2</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold mt-space-xs">Direct Scrap Feed Pre-Sorting Upgrade</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Install automated spectral sorters to purify low-grade ferrous scrap, enabling a 40% secondary ratio in crucible batches with zero quality loss.</p>
+<div class="grid grid-cols-2 gap-space-xs my-space-xs bg-surface-container-lowest p-space-sm rounded-lg">
+<div>
+<span class="font-label-sm text-[10px] text-on-surface-variant block uppercase">Abatement Vol</span>
+<span class="font-mono-data text-mono-data font-bold text-on-surface">72,000 t/yr</span>
+</div>
+<div>
+<span class="font-label-sm text-[10px] text-on-surface-variant block uppercase">Payback</span>
+<span class="font-mono-data text-mono-data font-bold text-secondary">14 Months</span>
+</div>
+</div>
+</div>
+<button class="btn-apply-rec mt-space-sm w-full py-space-xs px-space-md bg-surface-container-high text-on-surface rounded-lg font-label-sm text-label-sm font-semibold hover:bg-surface-container-highest transition-all flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Apply to Active Scenario</span>
+</button>
+</div>
+<!-- Action Card 3 -->
+<div class="bg-surface-container-low/40 p-space-lg rounded-xl flex flex-col justify-between transition-all hover:shadow-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-[2px] bg-surface-container-high text-on-surface font-mono-data text-mono-data text-[11px] font-bold rounded">Defensive: +$42/tCO₂e</span>
+<span class="font-mono-data text-[11px] text-on-surface-variant">Rank #3</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold mt-space-xs">Rotterdam Oxy-Hydrogen Co-Firing Trial</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Direct thermal decarbonization of Blast Crucible #4. Protects 1.2M tons of EU exports from definitive 2026 CBAM border equalizations.</p>
+<div class="grid grid-cols-2 gap-space-xs my-space-xs bg-surface-container-lowest p-space-sm rounded-lg">
+<div>
+<span class="font-label-sm text-[10px] text-on-surface-variant block uppercase">Abatement Vol</span>
+<span class="font-mono-data text-mono-data font-bold text-on-surface">125,000 t/yr</span>
+</div>
+<div>
+<span class="font-label-sm text-[10px] text-on-surface-variant block uppercase">Payback</span>
+<span class="font-mono-data text-mono-data font-bold text-on-surface">3.8 Years</span>
+</div>
+</div>
+</div>
+<button class="btn-apply-rec mt-space-sm w-full py-space-xs px-space-md bg-surface-container-high text-on-surface rounded-lg font-label-sm text-label-sm font-semibold hover:bg-surface-container-highest transition-all flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Apply to Active Scenario</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const sliderFuel = document.getElementById('slider-fuel');
+    const sliderPpa = document.getElementById('slider-ppa');
+    const sliderScrap = document.getElementById('slider-scrap');
+    const toggleMandate = document.getElementById('toggle-mandate');
+    const sliderEts = document.getElementById('slider-ets');
+
+    const labelFuel = document.getElementById('label-fuel');
+    const labelPpa = document.getElementById('label-ppa');
+    const labelScrap = document.getElementById('label-scrap');
+    const labelEts = document.getElementById('label-ets');
+
+    const kpiAbatement = document.getElementById('kpi-abatement');
+    const kpiCbam = document.getElementById('kpi-cbam');
+    const kpiPayback = document.getElementById('kpi-payback');
+    const kpiIrr = document.getElementById('kpi-irr');
+
+    const wfPpaVal = document.getElementById('wf-ppa-val');
+    const wfPpaBar = document.getElementById('wf-ppa-bar');
+    const wfFuelVal = document.getElementById('wf-fuel-val');
+    const wfFuelBar = document.getElementById('wf-fuel-bar');
+    const wfScrapVal = document.getElementById('wf-scrap-val');
+    const wfScrapBar = document.getElementById('wf-scrap-bar');
+    const wfMandateVal = document.getElementById('wf-mandate-val');
+    const wfMandateBar = document.getElementById('wf-mandate-bar');
+    const wfNetVal = document.getElementById('wf-net-val');
+    const wfNetBar = document.getElementById('wf-net-bar');
+
+    function calculate() {
+      const fuelPct = parseInt(sliderFuel.value, 10);
+      const ppaPct = parseInt(sliderPpa.value, 10);
+      const scrapPct = parseInt(sliderScrap.value, 10);
+      const mandate = toggleMandate.checked;
+      const etsPrice = parseInt(sliderEts.value, 10);
+
+      // Labels
+      labelFuel.textContent = fuelPct + '% H₂ Co-Fire';
+      labelPpa.textContent = ppaPct + '% Coverage';
+      labelScrap.textContent = scrapPct + '% Scrap Feed';
+      labelEts.textContent = '€' + etsPrice + ' / tCO₂e';
+
+      // Reductions
+      const ppaReduction = Math.round((ppaPct / 100) * 119565);
+      const fuelReduction = Math.round((fuelPct / 100) * 277777);
+      const scrapReduction = Math.round((scrapPct / 100) * 180000);
+      const mandateReduction = mandate ? 35800 : 0;
+
+      const totalAbatement = ppaReduction + fuelReduction + scrapReduction + mandateReduction;
+      const baseline = 1428000;
+      const scenarioNet = baseline - totalAbatement;
+
+      // Financials
+      const avoidedPenaltyMillions = ((totalAbatement * etsPrice * 0.71) / 1000000).toFixed(1);
+      const capexMillions = ((fuelPct * 0.45) + (scrapPct * 0.35) + 14.5).toFixed(1);
+      const opexSavings = ((avoidedPenaltyMillions * 0.6) - (fuelPct * 0.08)).toFixed(1);
+      const paybackYears = (capexMillions / (parseFloat(avoidedPenaltyMillions) * 0.5 + 0.1)).toFixed(1);
+      const irr = (Math.min(48, Math.max(12, (28.6 * (etsPrice / 120)) * (totalAbatement / 342800)))).toFixed(1);
+
+      // Update KPIs
+      kpiAbatement.textContent = '-' + totalAbatement.toLocaleString();
+      kpiCbam.textContent = '€' + avoidedPenaltyMillions + 'M';
+      kpiPayback.textContent = paybackYears + ' Yrs';
+      kpiIrr.textContent = irr + '%';
+
+      // Update Waterfall values & bar sizes
+      wfPpaVal.textContent = '-' + (ppaReduction / 1000).toFixed(0) + 'k';
+      wfPpaBar.style.height = Math.min(80, Math.max(8, (ppaReduction / 4000))) + '%';
+
+      wfFuelVal.textContent = '-' + (fuelReduction / 1000).toFixed(0) + 'k';
+      wfFuelBar.style.height = Math.min(80, Math.max(8, (fuelReduction / 4000))) + '%';
+
+      wfScrapVal.textContent = '-' + (scrapReduction / 1000).toFixed(0) + 'k';
+      wfScrapBar.style.height = Math.min(80, Math.max(8, (scrapReduction / 4000))) + '%';
+
+      wfMandateVal.textContent = mandate ? '-35.8k' : '0k';
+      wfMandateBar.style.height = mandate ? '12%' : '2%';
+
+      wfNetVal.textContent = (scenarioNet / 1000).toFixed(0) + 'k';
+      wfNetBar.style.height = Math.min(95, Math.max(20, (scenarioNet / 15000))) + '%';
+    }
+
+    [sliderFuel, sliderPpa, sliderScrap, sliderEts].forEach(el => {
+      el.addEventListener('input', calculate);
+    });
+    toggleMandate.addEventListener('change', calculate);
+
+    document.getElementById('reset-controls').addEventListener('click', () => {
+      sliderFuel.value = 45;
+      sliderPpa.value = 92;
+      sliderScrap.value = 40;
+      toggleMandate.checked = true;
+      sliderEts.value = 120;
+      calculate();
+    });
+
+    document.querySelectorAll('.btn-apply-rec').forEach(btn => {
+      btn.addEventListener('click', function() {
+        this.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span><span>Applied</span>';
+        this.classList.remove('bg-surface-container-high', 'text-on-surface');
+        this.classList.add('bg-secondary', 'text-on-secondary');
+      });
+    });
+
+    document.getElementById('btn-monte-carlo').addEventListener('click', function() {
+      const originalText = this.innerHTML;
+      this.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Simulating 5,000 paths...</span>';
+      setTimeout(() => {
+        this.innerHTML = '<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">verified</span><span>99.2% VaR Passed</span>';
+        setTimeout(() => { this.innerHTML = originalText; }, 2500);
+      }, 900);
+    });
+
+    document.getElementById('btn-save-blueprint').addEventListener('click', function() {
+      const originalText = this.innerHTML;
+      this.innerHTML = '<span class="material-symbols-outlined text-[18px]">task_alt</span><span>Blueprint Locked</span>';
+      setTimeout(() => { this.innerHTML = originalText; }, 2000);
+    });
+
+    document.getElementById('btn-export-memo').addEventListener('click', function() {
+      alert('Generating institutional Investment Memorandum (PDF) with discounted cashflow curves, CBAM exposure delta, and Board Executive Summary.');
+    });
+
+    calculate();
+  })();
+</script></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 py-space-sm px-space-xl"><div class="w-full flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><div class="flex items-center gap-space-lg"><span class="flex items-center gap-space-xs text-on-surface"><span class="material-symbols-outlined text-[16px] text-on-tertiary-container">verified_user</span><span>ISO 14064-1/2:2018 Certified Accounting</span></span><span class="text-outline-variant">•</span><span class="flex items-center gap-space-xs"><span>GHG Protocol Corporate Standard Scope 1-3 Compliant</span></span><span class="text-outline-variant">•</span><span class="font-mono-data text-mono-data text-[11px]">Regulatory Telemetry Sync: Oct 24, 2024 — 14:02:18 UTC</span></div><div class="flex items-center gap-space-md"><span class="font-mono-data text-mono-data text-[11px] bg-surface-container-low px-space-xs py-[2px] rounded border border-outline-variant/30">Ledger Node: EU-WEST-1 (Immutable SHA-256)</span><span class="text-on-surface-variant">© 2024 EcoAudit AI Systems</span></div></div></footer></div></body></html>

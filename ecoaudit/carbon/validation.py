@@ -6,6 +6,8 @@ before any calculation is performed. All validation errors are
 raised as ValidationError with descriptive messages.
 """
 
+from __future__ import annotations
+
 from decimal import Decimal
 
 from ecoaudit.carbon.models import ActivityData, EmissionFactor

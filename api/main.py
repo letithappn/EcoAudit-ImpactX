@@ -18,6 +18,11 @@ from ecoaudit.optimization.models import ScenarioDefinition
 from api.schemas import (
     ActivitiesResponse,
     ActivityDTO,
+    AIConfigRequest,
+    AIConfigResponse,
+    AIStatusResponse,
+    AITestRequest,
+    AITestResponse,
     EvidenceResponse,
     RecommendationsResponse,
     RunCreateResponse,
@@ -26,6 +31,7 @@ from api.schemas import (
     ScenarioRequest,
     ScenarioResponse,
 )
+from ecoaudit.ai.gemini_provider import DEFAULT_GEMINI_MODEL, test_gemini_connection
 from api.serializers import (
     activities_dto,
     decimal,
@@ -139,8 +145,56 @@ def _validate_upload(filename: str, content: bytes) -> None:
 
 
 @app.get("/api/health")
+@app.head("/api/health")
 def health() -> dict[str, str]:
     return {"status": "ok"}
+
+
+@app.get("/api/ai/status", response_model=AIStatusResponse)
+def get_ai_status() -> AIStatusResponse:
+    has_key = bool(os.environ.get("GEMINI_API_KEY", "").strip())
+    model = os.environ.get("GEMINI_MODEL", DEFAULT_GEMINI_MODEL)
+    return AIStatusResponse(
+        configured=has_key,
+        provider="gemini" if has_key else "mock",
+        model=model,
+        status="active" if has_key else "offline",
+        message="Gemini API connected and active" if has_key else "GEMINI_API_KEY is not set; running with deterministic mock engine",
+    )
+
+
+@app.post("/api/ai/config", response_model=AIConfigResponse)
+def configure_ai(request: AIConfigRequest) -> AIConfigResponse:
+    key = request.api_key.strip()
+    if not key:
+        raise HTTPException(status_code=422, detail="API key cannot be empty")
+
+    model = request.model or os.environ.get("GEMINI_MODEL", DEFAULT_GEMINI_MODEL)
+    os.environ["GEMINI_API_KEY"] = key
+    os.environ["GEMINI_MODEL"] = model
+
+    return AIConfigResponse(
+        success=True,
+        message=f"Gemini API key configured successfully with model {model}",
+        model=model,
+    )
+
+
+@app.post("/api/ai/test", response_model=AITestResponse)
+def test_ai(request: AITestRequest) -> AITestResponse:
+    key = request.api_key.strip()
+    if not key:
+        raise HTTPException(status_code=422, detail="API key cannot be empty")
+
+    model = request.model or os.environ.get("GEMINI_MODEL", DEFAULT_GEMINI_MODEL)
+    result = test_gemini_connection(api_key=key, model_name=model)
+    return AITestResponse(
+        success=result["success"],
+        message=result["message"],
+        model=result["model"],
+        response=result.get("response"),
+    )
+
 
 
 @app.post("/api/runs", response_model=RunCreateResponse, status_code=202)
@@ -163,18 +217,42 @@ def create_demo(
     provider: str = Query("mock"),
     year: int = Query(2024),
     country: str = Query("UK"),
+    preset: str = Query("competition"),
 ) -> RunCreateResponse:
     if provider not in ALLOWED_PROVIDERS:
         raise HTTPException(status_code=422, detail="provider must be mock or gemini")
     project_root = Path(__file__).resolve().parent.parent
-    demo_path = project_root / "data" / "demo" / "competition_demo.csv"
-    if not demo_path.exists():
+    if preset == "chicago":
         demo_path = project_root / "Chicago_Energy_Benchmarking_20260909.csv"
-    if not demo_path.exists():
+    elif preset == "synthetic":
         demo_path = project_root / "data" / "demo" / "synthetic_company_data.csv"
+    else:
+        demo_path = project_root / "data" / "demo" / "competition_demo.csv"
+        if not demo_path.exists():
+            demo_path = project_root / "Chicago_Energy_Benchmarking_20260909.csv"
+    if not demo_path.exists():
+        raise HTTPException(status_code=404, detail="Demo file not found")
     content = demo_path.read_bytes()
     session = run_store.create(demo_path.name, content, provider, year, country)
     return RunCreateResponse(run_id=session.run_id, status=session.status, stage=session.stage)
+
+
+@app.get("/api/runs")
+def list_runs() -> list[dict]:
+    sessions = run_store.list()
+    return [
+        {
+            "run_id": s.run_id,
+            "filename": s.filename,
+            "status": s.status,
+            "stage": s.stage,
+            "progress": s.progress,
+            "provider": s.provider,
+            "year": s.year,
+            "country": s.country,
+        }
+        for s in reversed(sessions)
+    ]
 
 
 @app.get("/api/runs/{run_id}/status", response_model=RunStatusResponse)

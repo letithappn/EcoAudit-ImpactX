@@ -2,6 +2,8 @@
 Specific dataset adapters for Phase 3 validation.
 """
 
+from __future__ import annotations
+
 import csv
 from collections.abc import Iterator
 from decimal import Decimal

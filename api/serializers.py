@@ -107,6 +107,7 @@ def _candidate_activity(record: ClassificationRecord) -> ActivityDTO:
             validation_status="review" if needs_review else "validated",
             validation_errors=[],
             validation_warnings=list(validation.warnings if validation else ()),
+            reasoning=candidate.reasoning if candidate else None,
         )
 
     return ActivityDTO(
@@ -124,6 +125,7 @@ def _candidate_activity(record: ClassificationRecord) -> ActivityDTO:
         validation_status="rejected",
         validation_errors=list(validation.errors if validation else ([record.error] if record.error else [])),
         validation_warnings=list(validation.warnings if validation else ()),
+        reasoning=candidate.reasoning if candidate else (record.error if record else None),
     )
 
 
